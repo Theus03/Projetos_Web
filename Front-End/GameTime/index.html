@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameTime</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mako&family=Open+Sans:wght@700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <aside>
+        <div class="container-card">
+            <div class="card noInit">
+                <h2 class="title-card">Não iniciados</h2><br>
+                <h2 class="title-number">5</h2>
+            </div>
+            <div class="card init">
+                <h2 class="title-card">Iniciados</h2><br>
+                <h2 class="title-number">2</h2>
+            </div>
+            <div class="card reset">
+                <h2 class="title-card">Zerados</h2><br>
+                <h2 class="title-number">7</h2>
+            </div>
+        </div>
+    </aside>
+    <header>
+        <h2 class="logo-title">GameTime</h2>
+        <button class="button-add">Adicionar Jogo</button>
+    </header>
+    <main class="container-content">
+        <table id="data-table">
+            <thead>
+                <tr>
+                    <th>Imagem</th>
+                    <th>Nome</th>
+                    <th>Categoria</th>
+                    <th>Situação</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><img class="img-game" src="./img/fifa.jpg" alt=""></td>
+                    <td>FIFA 21</td>
+                    <td>Futebol</td>
+                    <td class="td-situation">
+                        <input class="button-situation " type="button" value="Não Iniciado">
+                        <input class="button-situation init" type="button" value="Iniciado">
+                        <input class="button-situation " type="button" value="Zerado">
+                    </td>
+                </tr>
+                <tr>
+                    <td><img class="img-game" src="./img/nba.jpg" alt=""></td>
+                    <td>NBA 2K21</td>
+                    <td>Basquete</td>
+                    <td class="td-situation">
+                        <input class="button-situation " type="button" value="Não Iniciado">
+                        <input class="button-situation " type="button" value="Iniciado">
+                        <input class="button-situation reset" type="button" value="Zerado">
+                    </td>
+                </tr>
+                <tr>
+                    <td><img class="img-game" src="./img/madden.jpg" alt=""></td>
+                    <td>Madden 21</td>
+                    <td>Futebol Americano</td>
+                    <td class="td-situation">
+                        <input class="button-situation noInit" type="button" value="Não Iniciado">
+                        <input class="button-situation " type="button" value="Iniciado">
+                        <input class="button-situation " type="button" value="Zerado">
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+</body>
+</html>

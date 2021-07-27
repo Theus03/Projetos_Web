@@ -1,0 +1,257 @@
+/*======== GLOBAL ==============*/
+
+:root {
+    --back-main: #1B212C;
+    --back-secondary: #3C4657;
+    --back-button: #F64B29;
+    --button-not-init: #F69829;
+    --button-init: #F67329;
+    --button-reset: #F64B29;
+    --button-situation: #373B42;
+    --text-white: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 93.75% /* Equivale a 15px*/
+}
+
+body {
+    background-color: var(--back-main);
+}
+
+.container-content {
+    width: min(90vw, 800px);
+    margin-left: 12.6rem;
+    text-align: center;
+    font: normal 1rem "Mako", sans-serif;
+}
+
+/*=========== Titles =============*/
+.logo-title {
+    font: bold 2rem 'Open Sans', sans-serif;
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: var(--text-white);
+}
+
+.title-card {  
+    font: bold 1.5rem 'Mako', sans-serif;
+    text-transform: uppercase;
+    font-weight: normal;
+    letter-spacing: 1px;
+    color: var(--text-white);
+}
+
+.title-number {
+    font: bold 2rem 'Open Sans', sans-serif;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: var(--text-white);
+}
+
+/* ============ Buttons ==================*/
+.button-add {
+    font: normal 1rem 'Mako', sans-serif;
+    text-transform: uppercase;
+    background-color: var(--back-button);
+    color: var(--text-white);
+    border: none;
+    width: 15rem;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.button-add:hover {
+    opacity: 95%;
+    padding-left: 1rem;
+}
+
+.button-situation {
+    width: 10rem;
+    margin: 0.2rem;
+    padding: 0.5rem;
+    background-color: var(--button-situation);
+    border: none;
+    color: var(--text-white);
+    text-transform: uppercase;
+    font: normal 1rem "Mako", sans-serif;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.button-situation:hover {
+    padding-left: 1rem;
+    opacity: 95%;
+}
+
+.button-situation.noInit {
+    background-color: var(--button-not-init)
+}
+
+.button-situation.init {
+    background-color: var(--button-init)
+}
+
+.button-situation.reset {
+    background-color: var(--button-reset)
+}
+
+
+/*=========== Aside ================*/
+aside {
+    background: var(--back-secondary);
+    position: fixed;
+    right: 0;
+    width: 25%;
+    height: 100%;
+}
+
+.container-card {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+}
+
+.card {
+    background-color:var(--back-main);
+    padding: 3.5rem;
+    margin-top: 2rem;
+    text-align: center;
+    transition: 0.4s ;
+}
+
+
+.card.noInit {
+    border: solid 2px var(--button-not-init);
+}
+.card.noInit:hover {
+    background-color: var(--button-not-init);
+}
+
+.card.init {
+    border: solid 2px var(--button-init);
+}
+.card.init:hover {
+    background-color: var(--button-init);
+}
+
+.card.reset {
+    border: solid 2px var(--button-reset)
+}
+
+.card.reset:hover {
+    background-color: var(--button-reset);
+}
+
+/*============ Header ==================*/
+
+header {
+    display: flex;
+    width: 75%;
+    padding-top: 5rem;
+    justify-content: space-around;
+}
+
+/*=========== Table ====================*/
+  
+#data-table {
+    margin-top: 2rem;
+    width: 100%;
+    border-spacing: 0 0.5rem;
+    color: var(--text-white);
+}
+
+.img-game {
+    width: 5rem;
+}
+
+table thead{
+    background:var(--back-secondary);
+    height: 3.5rem;
+    transition: 0.4s;
+}
+table thead:hover {
+    opacity: 85%;
+}
+
+table tbody {
+    background: var(--back-secondary);
+}
+
+table tr:hover {
+    transition:0.4s;
+    background: #394352;
+}
+
+.td-situation {
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Responsive ================== */
+
+@media (max-width: 800px) {
+    html{
+        font-size: 87.5%; /* Equivale a 14px */
+    }
+    .logo-title {
+        font: bold 1.5rem 'Open Sans', sans-serif;
+        font-weight: 800;
+        letter-spacing: 1px;
+        color: var(--text-white);
+    }
+    
+    .title-card {  
+        font: bold 1rem 'Mako', sans-serif;
+        text-transform: uppercase;
+        font-weight: normal;
+        letter-spacing: 1px;
+        color: var(--text-white);
+    }
+    
+    .title-number {
+        font: bold 1.5rem 'Open Sans', sans-serif;
+        font-weight: 700;
+        letter-spacing: 1px;
+        color: var(--text-white);
+    }
+
+    header {
+        width: 100%;
+    }
+
+    aside {
+        background: var(--back-secondary);
+        position: relative;
+        left:0;
+        width: 100%;
+        
+    }
+    .container-card {
+        display: flex;
+        flex-direction:row;
+        padding: 2rem;
+    }
+        
+    .card {
+        background-color:var(--back-main);
+        padding: 0.5rem;
+        margin-left: 1rem;
+        width: 10rem;
+        text-align: center;
+    }
+
+    .container-content {
+        margin: auto;
+        overflow: auto;
+    }
+}

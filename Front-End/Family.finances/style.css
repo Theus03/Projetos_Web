@@ -16,6 +16,11 @@
 }
 
 html {
+    font-size: 93.75%; /* Equivale a 15px */
+}
+
+
+body {
     background: var(--back-main);
     font-family: 'Arsenal', sans-serif;
 }
