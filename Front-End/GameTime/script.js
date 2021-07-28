@@ -4,7 +4,6 @@ let button_closeModal = document.querySelector(".box-close");
 let modal_overlay = document.querySelector(".modal-overlay");
 
 // Criar Função para o Modal 
-
 const Modal = [  
     // Abrir Modal  
     button_openModal.addEventListener("click", () => {

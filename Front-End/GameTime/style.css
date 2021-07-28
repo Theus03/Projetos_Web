@@ -302,7 +302,6 @@ table tr:hover {
 }
 .input-group{
     margin-top: 0.8rem;
-    background-color: #1B212C;
     display: flex;
     flex-direction:column;
     align-items:center;
@@ -328,6 +327,10 @@ table tr:hover {
     display: inline-block;
     text-align: center;
     cursor: pointer;
+    transition: 0.4s;
+}
+.input.file:hover{
+    padding-left: 1.5rem;
 }
 .input {
     width: 50%;
