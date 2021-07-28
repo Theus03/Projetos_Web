@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Mako&family=Open+Sans:wght@700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mako&family=Open+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,300&display=swap" rel="stylesheet">
 </head>
 <body>
     <aside>
@@ -75,5 +76,34 @@
             </tbody>
         </table>
     </main>
+    <div class="modal-overlay">
+        <div class="modal">
+            <div id="form">
+                <div class="header-group">
+                    <h2 class="title-form">Novo Jogo</h2>
+                    <a href="#" class="box-close">x</a>
+                </div>
+                <form action="">
+                    <div class="input-group">
+                        <label class="input file" for="image">Fazer upload da imagem do jogo</label>
+                        <input class="upload" type="file" id="image" name="image" placeholder="Imagem"/>
+                    </div>
+                    <div class="input-group">
+                        <label class="sr-only" for="name">Nome</label>
+                        <input class="input" type="text" id="name" name="name" placeholder="Nome"/>
+                    </div>
+                    <div class="input-group">
+                        <label class="sr-only" for="category">Categoria</label><br>
+                        <input class="input" type="text" id="category" name="category" placeholder="Categoria"/>
+                        <small class="help">Exemplo: Ação, Aventura e etc....</small>
+                    </div>
+                    <div class="input-group actions">
+                        <button class="button-new-add">Adicionar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
