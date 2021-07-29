@@ -289,6 +289,7 @@ table tr:hover {
     font: normal 1.5rem "Open Sans", sans-serif;
     color: var(--text-white);
     transition: 0.4s;
+    cursor: pointer;
 }
 
 .box-close:hover {
@@ -441,7 +442,7 @@ table tr:hover {
         width: 10rem;
         margin: 0.2rem;
         padding: 0.5rem;
-        background-color: var(--button-situation);
+        background-color: var(--back-button);
         border: none;
         color: var(--text-white);
         text-transform: uppercase;

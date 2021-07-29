@@ -16,21 +16,21 @@
         <div class="container-card">
             <div class="card noInit">
                 <h2 class="title-card">Não iniciados</h2><br>
-                <h2 class="title-number">5</h2>
+                <h2 class="title-number" id="numberNoInit" >0</h2>
             </div>
             <div class="card init">
                 <h2 class="title-card">Iniciados</h2><br>
-                <h2 class="title-number">2</h2>
+                <h2 class="title-number" id="numberInit">0</h2>
             </div>
             <div class="card reset">
                 <h2 class="title-card">Zerados</h2><br>
-                <h2 class="title-number">7</h2>
+                <h2 class="title-number" id="numberReset">0</h2>
             </div>
         </div>
     </aside>
     <header>
         <h2 class="logo-title">GameTime</h2>
-        <button class="button-add">Adicionar Jogo</button>
+        <button class="button-add" onclick="Modal.openModal()">Adicionar Jogo</button>
     </header>
     <main class="container-content">
         <table id="data-table">
@@ -43,36 +43,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td><img class="img-game" src="./img/fifa.jpg" alt=""></td>
-                    <td>FIFA 21</td>
-                    <td>Futebol</td>
-                    <td class="td-situation">
-                        <input class="button-situation " type="button" value="Não Iniciado">
-                        <input class="button-situation init" type="button" value="Iniciado">
-                        <input class="button-situation " type="button" value="Zerado">
-                    </td>
-                </tr>
-                <tr>
-                    <td><img class="img-game" src="./img/nba.jpg" alt=""></td>
-                    <td>NBA 2K21</td>
-                    <td>Basquete</td>
-                    <td class="td-situation">
-                        <input class="button-situation " type="button" value="Não Iniciado">
-                        <input class="button-situation " type="button" value="Iniciado">
-                        <input class="button-situation reset" type="button" value="Zerado">
-                    </td>
-                </tr>
-                <tr>
-                    <td><img class="img-game" src="./img/madden.jpg" alt=""></td>
-                    <td>Madden 21</td>
-                    <td>Futebol Americano</td>
-                    <td class="td-situation">
-                        <input class="button-situation noInit" type="button" value="Não Iniciado">
-                        <input class="button-situation " type="button" value="Iniciado">
-                        <input class="button-situation " type="button" value="Zerado">
-                    </td>
-                </tr>
+               
             </tbody>
         </table>
     </main>
@@ -81,9 +52,9 @@
             <div id="form">
                 <div class="header-group">
                     <h2 class="title-form">Novo Jogo</h2>
-                    <a href="#" class="box-close">x</a>
+                    <a  class="box-close" onclick="Modal.closeModal();">x</a>
                 </div>
-                <form action="">
+                <form action="" onsubmit="Form.submit(event)">
                     <div class="input-group">
                         <label class="input file" for="image">Fazer upload da imagem do jogo</label>
                         <input class="upload" type="file" id="image" name="image" placeholder="Imagem"/>
