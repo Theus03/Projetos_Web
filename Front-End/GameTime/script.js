@@ -1,6 +1,6 @@
 // Declarar Variável
 let modal_overlay = document.querySelector(".modal-overlay");
-
+let contNoInit = 0, contInit = 0, contReset = 0;
 
 // Criar Função para o Modal 
 const Modal = {
@@ -24,8 +24,6 @@ const Storage = {
     }
 }
 
-// Criar Função de ações
-
 const Game = {
     // pegar tudo storage
     all: Storage.get(),
@@ -37,27 +35,36 @@ const Game = {
         // reinicia a aplicação
         App.reload();
     },
-    noInitGame() { 
+
+    noInitGame() {
         let noInitGame = 0;
 
-        Game.all.forEach(game => {
-            if(noInitGame >= 0){
-                noInitGame ++;
-            }
+        Game.all.forEach(() => {
+            noInitGame++;
         })
 
-        return noInitGame;
+        contNoInit++;
+        resultNoInit = noInitGame + contNoInit;
+        document.getElementById('numberNoInit').innerHTML = resultNoInit;
+        
+        return resultNoInit;
     },
-
+    
     initGame() {
-        initGame++;
-
-        return initGame;
+        let initGame = 0;
+        contInit++;
+        resultInit = initGame + contInit;
+        document.getElementById('numberInit').innerHTML = resultInit;
+        return resultInit;
     },
+
     resetGame() {
-        numberReset.innerHTML = 0;
-        resetGame++;
-        numberReset.innerHTML = resetGame;
+        let resetGame = 0;
+        contReset++;
+        resultReset = resetGame + contReset;
+        document.getElementById('numberReset').innerHTML = resultReset;
+        
+        return resultReset;
     }
 }
 
@@ -69,7 +76,6 @@ const DOM = {
         addGame(game) {
             const tr = document.createElement('tr');
             tr.innerHTML = DOM.innerHTMLGame(game)
-
             DOM.gamesContainer.appendChild(tr);
         },
 
@@ -96,13 +102,14 @@ const DOM = {
             return html
         },
 
-         // atualiza os cards(cards: não iniciado, iniciado e zerado)
+        //atualiza os cards(cards: não iniciado, iniciado e zerado)
         updateCards() {
+            
             document.getElementById('numberNoInit').innerHTML = Game.noInitGame();
-
+            
             document.getElementById('numberInit').innerHTML = Game.initGame();
 
-            document.getElementById('numberReset').innerHTML = resetGame();
+            document.getElementById('numberReset').innerHTML = Game.resetGame();
         },
 
         //limpar as contas
@@ -110,7 +117,6 @@ const DOM = {
             DOM.gamesContainer.innerHTML = "";
         }
 }
-
 
 const Form = {
     // declarando as informações que tem dentro do formulário
@@ -173,7 +179,6 @@ const Form = {
 
 }
 
-
 const App = {
     // da o inicio da aplicação, e chama os métodos de salvamento dos jogos e atualização dos cards
     init() {
@@ -193,4 +198,4 @@ const App = {
 
 // inicializa a aplicação 
 
-App.init();
+App.init()
