@@ -38,11 +38,11 @@ const Game = {
 
     noInitGame() {
         let noInitGame = 0;
-
+        
         Game.all.forEach(() => {
             noInitGame++;
         })
-
+        
         contNoInit++;
         resultNoInit = noInitGame + contNoInit;
         document.getElementById('numberNoInit').innerHTML = resultNoInit;
@@ -88,7 +88,7 @@ const DOM = {
             // estrutura html da tabela
             const html = `
             <tr>
-                <td><img class="img-game" src="${game.image}" alt=""></td>
+                <td><img class="img-game" src="${game.image}" alt="">${game.image}</td>
                 <td class="name">${game.name}</td>
                 <td class="category">${game.category}</td>
                 <td class="td-situation">
