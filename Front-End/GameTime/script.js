@@ -89,7 +89,7 @@ const DOM = {
             const html = `
             <tr>
                 <td><img class="img-game" src="${game.image}" alt="">${game.image}</td>
-                <td class="name">${game.name}</td>
+                <td class="name">${game.name}</td>  
                 <td class="category">${game.category}</td>
                 <td class="td-situation">
                     <input class="button-situation noInit" id="noInit" onclick="Game.noInitGame()" type="button" value="Não Iniciado">
