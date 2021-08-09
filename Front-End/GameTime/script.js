@@ -26,7 +26,7 @@ const Storage = {
 const Game = {
     // pegar tudo storage
     all: Storage.get(),
-    cont: 0,
+    cont: 1,
     noInit: 0,
     colorButton: document.querySelector(".button-situation"),
 
@@ -35,6 +35,13 @@ const Game = {
         Game.all.push(game)
 
         // reinicia a aplicação
+        App.reload();
+    },
+
+    remove(){
+        // apagar um jogo
+        Game.all.splice(index, 1)
+
         App.reload();
     },
 
@@ -89,7 +96,6 @@ const Game = {
     }
 }
 
-
 const DOM = {
     // definindo o container das Contas
       gamesContainer: document.querySelector('#data-table tbody'),
@@ -108,9 +114,9 @@ const DOM = {
             // const amount = Utils.formatCurrency(transaction.amount)
     
             // estrutura html da tabela
+            // <td><img class="img-game" src="" alt="">${game.image}</td>
             const html = `
             <tr>
-                <td><img class="img-game" src="${game.image}" alt="">${game.image}</td>
                 <td class="name">${game.name}</td>  
                 <td class="category">${game.category}</td>
                 <td class="td-situation">
@@ -148,6 +154,7 @@ const Form = {
 
     // pegando os valores dos inputs
     getValues() {
+
         return {
             image: Form.image.value,
             name: Form.name.value,

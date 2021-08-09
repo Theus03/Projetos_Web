@@ -36,10 +36,11 @@
         <table id="data-table">
             <thead>
                 <tr>
-                    <th>Imagem</th>
+                    <!-- <th>Imagem</th> -->
                     <th>Nome</th>
                     <th>Categoria</th>
                     <th>Situação</th>
+                    <th></th>
                 </tr>
             </thead>
             <tbody>
@@ -57,7 +58,7 @@
                 <form action="" onsubmit="Form.submit(event)">
                     <div class="input-group">
                         <label class="input file" for="image">Fazer upload da imagem do jogo</label>
-                        <input class="upload" type="file" id="image" name="image" placeholder="Imagem"/>
+                        <input class="upload"  onchange="previewFile()" type="file" id="image" name="image" placeholder="Imagem"/>
                     </div>  
                     <div class="input-group">
                         <label class="sr-only" for="name">Nome</label>
