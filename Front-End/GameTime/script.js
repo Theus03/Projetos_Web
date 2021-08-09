@@ -1,6 +1,5 @@
 // Declarar Variável
 let modal_overlay = document.querySelector(".modal-overlay");
-let contNoInit = 0, contInit = 0, contReset = 0;
 
 // Criar Função para o Modal 
 const Modal = {
@@ -27,6 +26,9 @@ const Storage = {
 const Game = {
     // pegar tudo storage
     all: Storage.get(),
+    cont: 0,
+    noInit: 0,
+    colorButton: document.querySelector(".button-situation"),
 
     add(game) {
         // inserir um novo jogo
@@ -37,39 +39,59 @@ const Game = {
     },
 
     noInitGame() {
-        let noInitGame = 0;
-        
+
         Game.all.forEach(() => {
-            noInitGame++;
+            if(Game.all.length > 0){
+                Game.noInit++;
+            } else {
+                alert("Número não correspondido")
+            }
         })
         
-        contNoInit++;
-        resultNoInit = noInitGame + contNoInit;
-        document.getElementById('numberNoInit').innerHTML = resultNoInit;
+       
+        document.getElementById('numberNoInit').innerHTML = Game.noInit;
         
-        return resultNoInit;
+        return noInitGame;
     },
+    
     
     initGame() {
         let initGame = 0;
-        contInit++;
-        resultInit = initGame + contInit;
-        document.getElementById('numberInit').innerHTML = resultInit;
-        return resultInit;
-    },
-
-    resetGame() {
-        let resetGame = 0;
-        contReset++;
-        resultReset = resetGame + contReset;
-        document.getElementById('numberReset').innerHTML = resultReset;
         
+        if(Game.all.length > 0 && Game.all.length > Game.cont){
+            resultInit = Game.cont++;
+            document.getElementById('numberInit').innerHTML = resultInit;
+            document.getElementById('numberNoInit').innerHTML = Game.noInit - Game.cont;
+            Game.colorButton.classList.add(init)
+        } else {
+            alert("Não há jogos suficientes para completar a ação;")
+        }
+        
+        return resultInit;
+        
+    },
+    
+    
+    resetGame() {
+        var resetGame = 0;
+        
+        if(Game.all.length > 0 && Game.all.length > Game.cont){
+            resultReset = Game.cont++;
+            document.getElementById('numberReset').innerHTML = resultReset;
+            document.getElementById('numberNoInit').innerHTML = Game.noInit - Game.cont;
+            
+            Game.colorButton.classList.add(reset)
+        } else {
+            alert("Não há jogos suficientes para completar a ação;")
+        }
+   
         return resultReset;
     }
 }
 
+
 const DOM = {
-      // definindo o container das Contas
+    // definindo o container das Contas
       gamesContainer: document.querySelector('#data-table tbody'),
       
         // adiciona um jogo dentro da tabela
@@ -138,6 +160,10 @@ const Form = {
         const { image, name, category } = Form.getValues()
         
         // verifica se os campos estão vazios, caso estejam retornam uma mensagem de erro
+        if(image.value != null){
+            throw new Error("Imagem capturada com sucesso!")
+        }
+
         if( image.trim() === "" || name.trim() === "" || category.trim() === "" ) {
                 throw new Error("Por favor, preencha os campos obrigatórios: nome e categoria.")
         }
