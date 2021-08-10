@@ -26,53 +26,37 @@ const Storage = {
 const Game = {
     // pegar tudo storage
     all: Storage.get(),
-    cont: 1,
-    noInit: 0,
-    colorButton: document.querySelector(".button-situation"),
-
+    contInit: 0,
+    contReset: 0,
     add(game) {
         // inserir um novo jogo
         Game.all.push(game)
-
+        
         // reinicia a aplicação
         App.reload();
     },
-
-    remove(){
-        // apagar um jogo
-        Game.all.splice(index, 1)
-
-        App.reload();
-    },
-
+    
     noInitGame() {
-
+        let noInit =  0
         Game.all.forEach(() => {
-            if(Game.all.length > 0){
-                Game.noInit++;
-            } else {
-                alert("Número não correspondido")
-            }
+            noInit++; 
+            document.getElementById('numberNoInit').innerHTML = noInit;
         })
         
-       
-        document.getElementById('numberNoInit').innerHTML = Game.noInit;
-        
-        return noInitGame;
+        return noInit;
     },
     
     
     initGame() {
-        let initGame = 0;
-        
-        if(Game.all.length > 0 && Game.all.length > Game.cont){
-            resultInit = Game.cont++;
+        let resultInit =  0
+        if(Game.all.length > 1 && Game.all.length >= Game.contInit){
+            resultInit = Game.contInit++;
             document.getElementById('numberInit').innerHTML = resultInit;
-            document.getElementById('numberNoInit').innerHTML = Game.noInit - Game.cont;
-            Game.colorButton.classList.add(init)
-        } else {
-            alert("Não há jogos suficientes para completar a ação;")
-        }
+            if(Game.all.length >= 0){
+                document.getElementById('numberNoInit').innerHTML = Game.noInitGame() - Game.contInit;
+            }
+        } 
+        
         
         return resultInit;
         
@@ -80,52 +64,51 @@ const Game = {
     
     
     resetGame() {
-        var resetGame = 0;
-        
-        if(Game.all.length > 0 && Game.all.length > Game.cont){
-            resultReset = Game.cont++;
+        let resultReset =  0;
+        if(Game.all.length > 1 && Game.all.length >= Game.contReset){
+            resultReset = Game.contReset++;
             document.getElementById('numberReset').innerHTML = resultReset;
-            document.getElementById('numberNoInit').innerHTML = Game.noInit - Game.cont;
-            
-            Game.colorButton.classList.add(reset)
-        } else {
-            alert("Não há jogos suficientes para completar a ação;")
-        }
-   
+            if(Game.all.length >= 0){
+                document.getElementById('numberNoInit').innerHTML = Game.noInitGame() + 1 - Game.contReset;
+            }
+        } 
+        
+        
         return resultReset;
     }
 }
 
+
 const DOM = {
     // definindo o container das Contas
-      gamesContainer: document.querySelector('#data-table tbody'),
-      
-        // adiciona um jogo dentro da tabela
-        addGame(game) {
-            const tr = document.createElement('tr');
-            tr.innerHTML = DOM.innerHTMLGame(game)
+    gamesContainer: document.querySelector('#data-table tbody'),
+    
+    // adiciona um jogo dentro da tabela
+    addGame(game) {
+        const tr = document.createElement('tr');
+        tr.innerHTML = DOM.innerHTMLGame(game)
             DOM.gamesContainer.appendChild(tr);
         },
-
-        innerHTMLGame(game) {
+        
+        innerHTMLGame(game, index) {
             // // se o valor da conta for maior que zero irá adicionar uma classe diferente onde contém cores diferentes nessas classes
             // const CSSclass = transaction.amount  > 0 ? "income" : "expense"
-    
+            
             // const amount = Utils.formatCurrency(transaction.amount)
-    
+            
             // estrutura html da tabela
             // <td><img class="img-game" src="" alt="">${game.image}</td>
             const html = `
-            <tr>
-                <td class="name">${game.name}</td>  
-                <td class="category">${game.category}</td>
-                <td class="td-situation">
-                    <input class="button-situation noInit" id="noInit" onclick="Game.noInitGame()" type="button" value="Não Iniciado">
-                    <input class="button-situation " id="init" type="button" onclick="Game.initGame()"  value="Iniciado">
-                    <input class="button-situation " id="reset" type="button" onclick="Game.resetGame()" value="Zerado">
+            <tr onclick="Game.remove(${index})">
+            <td class="name">${game.name}</td>  
+            <td class="category">${game.category}</td>
+            <td class="td-situation">
+            <input class="button-situation " id="noInit" onclick="Game.noInitGame()" type="button" value="Não Iniciado">
+            <input class="button-situation" id="init" type="button" onclick="Game.initGame()"  value="Iniciado">
+                <input class="button-situation " id="reset" type="button" onclick="Game.resetGame()" value="Zerado">
                 </td>
-            </tr>
-            `
+                </tr>
+                `
     
             return html
         },
@@ -148,7 +131,7 @@ const DOM = {
 
 const Form = {
     // declarando as informações que tem dentro do formulário
-    image: document.querySelector('input#image'),
+    // image: document.querySelector('input#image'),
     name: document.querySelector('input#name'),
     category: document.querySelector('input#category'),
 
@@ -156,7 +139,7 @@ const Form = {
     getValues() {
 
         return {
-            image: Form.image.value,
+            // image: Form.image.value,
             name: Form.name.value,
             category: Form.category.value
         }
@@ -164,38 +147,33 @@ const Form = {
 
     // validando os campos 
     validateFields() {
-        const { image, name, category } = Form.getValues()
+        const { name, category } = Form.getValues()
         
         // verifica se os campos estão vazios, caso estejam retornam uma mensagem de erro
-        if(image.value != null){
-            throw new Error("Imagem capturada com sucesso!")
-        }
-
-        if( image.trim() === "" || name.trim() === "" || category.trim() === "" ) {
+        
+        if( name.trim() === "" || category.trim() === "" ) {
                 throw new Error("Por favor, preencha os campos obrigatórios: nome e categoria.")
         }
     },
 
     // Formata os valores que estão nos campos
     formatValues() {
-        let { image, name, category } = Form.getValues()
+        let { name, category } = Form.getValues()
 
         return {
-            image,
             name,
-            category,
+            category
         }
     },
 
 
     // limpa os campos do formulário
     clearFields() {
-        Form.image.value = ""
         Form.name.value = ""
         Form.category.value = ""
     },
 
-    // aqui ocorre o envio das informações do formulário, assim é chamado a função add para adicionar as informações da conta na tabela
+    // aqui ocorre o envio das informações do formulário, assim é chamado a função add para adicionar as informações dos jogos na tabela
     submit(event) {
         event.preventDefault()
 

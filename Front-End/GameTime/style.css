@@ -97,7 +97,7 @@ body {
     width: 10rem;
     margin: 0.2rem;
     padding: 0.5rem;
-    background-color: var(--button-situation);
+    background: var(--button-situation);
     border: none;
     color: var(--text-white);
     text-transform: uppercase;
@@ -223,6 +223,7 @@ table thead:hover {
 table tbody {
     background: var(--back-secondary);
 }
+
 
 table tr:hover {
     transition:0.4s;
