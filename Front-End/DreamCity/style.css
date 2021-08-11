@@ -1,0 +1,170 @@
+/*============= GLOBAL ================*/
+
+:root {
+    --text-color: #000;
+    --app-background: #fff;
+    --header-background: #1DA6FB;
+    --container-one-background: #F4F4F4;
+    --thead-background: #E9E9E9;
+    --tbody-background: #F8F8F8;
+    --modal-background: #F4F4F4;
+    --field-modal-background: #E5E5E5;
+    --button-blue-background: #1DA6FB;
+    --button-red-background: #FB1D1D;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 93.75%; 
+}
+
+body {
+    background: var(--app-background);
+    font-family: 'Poppins', sans-serif;
+    overflow: auto;
+}
+
+#container-main {
+    width: min(90vw, 800px);
+    margin: auto;
+}
+
+/*============== TEXTS ================*/
+.text-total {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.result-total {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+/*============== BUTTONS ==============*/
+.button {
+    background: var(--button-blue-background);
+    border: none;
+    color: #f4f4f4;
+    font-size: 1rem;
+    padding: 0.5rem 1rem 0.5rem;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/*============== HEADER ===============*/
+
+#header {
+    background: var(--header-background);
+    padding: 1rem 0 5rem; /* Superior, horizontal e inferior */
+}
+
+.logo {
+    text-align: center;
+    padding: 2rem;
+    font-size: 3rem;
+    color: #fff;
+    font-weight: 800;
+}
+
+/*============= SECTION ================*/
+
+#container-one {
+    background: var(--container-one-background);
+    padding: 3rem;
+    margin-top: -5rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0px 4px rgba(0, 0, 0, 0.25);
+}
+
+.total {
+    text-align: center;
+}
+
+/*============= TABLE ==================*/
+ 
+#container-two {
+    overflow: auto;
+}
+
+#data-table {
+    width: 100%;
+    border-spacing: 0rem 0.5rem;
+    margin-top: 1.5rem;
+    overflow: auto;
+}
+
+table thead tr th:first-child, 
+table tbody tr td:first-child{
+    border-radius: 0.25rem 0 0 0.25rem;
+}
+table thead tr th:last-child, 
+table tbody tr td:last-child{
+    border-radius: 0 0.25rem 0.25rem 0;
+}
+
+table thead th {
+    background: var(--thead-background);
+    padding: 1rem 2rem;
+    font-weight: 500;
+    text-align: center;
+    font-size: 1rem;
+}
+
+table tbody td{
+    background: var(--tbody-background);
+    padding: 1rem 2rem;
+    font-weight: 400;
+    text-align: center;
+    font-size: 1rem;
+}
+
+table tbody tr:hover, table thead:hover{
+    opacity: 90%;
+    transition: 0.4s;
+}
+
+.icon-delete {
+    width: 2rem;
+    cursor: pointer;
+}
+
+
+/*=========== RESPONSIVO =================*/
+
+@media (max-width: 800px) {
+
+    /*============= GLOBAL ================*/
+
+    html{
+        font-size: 87.5%;
+    }
+    body {
+        height: 200vh;
+    }
+
+        
+    /*============= SECTION ================*/
+
+    #container-one {
+        background: var(--container-one-background);
+        padding: 3rem;
+        margin-top: -5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        box-shadow: 0px 4px rgba(0, 0, 0, 0.25);
+    }
+    .total {
+        margin-bottom: 1.8rem;
+    }
+}
