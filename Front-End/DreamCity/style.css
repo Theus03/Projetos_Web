@@ -45,15 +45,48 @@ body {
     font-weight: 700;
 }
 
+.title-form {
+    text-align: center;
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
 /*============== BUTTONS ==============*/
-.button {
+
+.button.add, .button.form-add {
     background: var(--button-blue-background);
     border: none;
     color: #f4f4f4;
     font-size: 1rem;
-    padding: 0.5rem 1rem 0.5rem;
+    padding: 1rem 1.5rem 1rem;
     border-radius: 10px;
     cursor: pointer;
+    transition: 0.4s;
+}
+
+.button.add:hover {
+    margin-bottom: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.button.form-add:hover {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.button.cancel {
+    border: solid 3px var(--button-red-background);
+    color: var(--button-red-background);
+    font-size: 1rem;
+    padding: 1rem 1.5rem 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.button.cancel:hover {
+    background: var(--button-red-background);
+    color: #f4f4f4;
 }
 
 /*============== HEADER ===============*/
@@ -81,7 +114,7 @@ body {
     justify-content: space-around;
     align-items: center;
     border-radius: 10px;
-    box-shadow: 0px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .total {
@@ -89,7 +122,7 @@ body {
 }
 
 /*============= TABLE ==================*/
- 
+
 #container-two {
     overflow: auto;
 }
@@ -136,11 +169,75 @@ table tbody tr:hover, table thead:hover{
     cursor: pointer;
 }
 
+/*=========== MODAL ======================*/
+
+.modal-overlay {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1;
+    transition: 0.4s;
+}
+
+.modal-overlay.add.active {
+    opacity: 100;
+    visibility: visible;
+}
+
+.modal {
+    background-color: var(--modal-background);
+    border-radius: 5px;
+    padding: 1rem;
+    position: relative;
+    z-index: 1;
+}
+
+/*=========== FORM =======================*/
+#form {
+    padding: 1rem 3rem 3rem;
+    width: 100%;
+}
+
+form {
+    width: 40vw;
+}
+
+.input-group, .button-group {
+    margin-top: 0.8rem;
+    padding: 0.5rem;
+    display: flex;
+    justify-content: center;
+}
+.button-group input {
+    margin: 0 1rem;
+    width: 12rem;
+}
+
+.input-group input {
+    background: var(--field-modal-background);
+    border-radius: 5px;
+    border: none;
+    padding: 1rem;
+    width: 70%;
+    transition: 0.4s;
+    outline: none;
+}
+
+.input-group input:focus {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
 
 /*=========== RESPONSIVO =================*/
 
 @media (max-width: 800px) {
-
+    
     /*============= GLOBAL ================*/
 
     html{
@@ -166,5 +263,43 @@ table tbody tr:hover, table thead:hover{
     }
     .total {
         margin-bottom: 1.8rem;
+    }
+
+        
+    /*=========== FORM =======================*/
+    #form {
+        padding: 5rem 3rem 10rem;
+        width: 100%;
+    }
+
+    form {
+        width: 60vw;
+    }
+
+    .input-group, .button-group {
+        margin-top: 0.8rem;
+        padding: 0.5rem;
+        display: flex;
+        justify-content: center;
+    }
+    .button-group input {
+        margin: 0 1rem;
+        width: 12rem;
+    }
+
+    .input-group input {
+        background: var(--field-modal-background);
+        border-radius: 5px;
+        border: none;
+        padding: 1rem;
+        width: 100%;
+    }
+}
+@media (min-height: 1000px) {
+    
+    /*=========== FORM =======================*/
+    #form {
+        padding: 5rem 3rem 50rem;
+        width: 100%;
     }
 }

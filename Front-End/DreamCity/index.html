@@ -21,8 +21,8 @@
                 <h2 class="text-total">Total de Cidades</h2>
                 <h3 class="result-total">3</h3>
             </div>
-            <div class="button">
-                <input type="button" value="Adicionar Cidade" class="button add">
+            <div class="button-add-container">
+                <input type="button" value="Adicionar Cidade" class="button add" onclick="Modal.modalAdd();">
             </div>
         </section>
         <section id="container-two">
@@ -58,5 +58,28 @@
             </table>
         </section>
     </main>
+    <div class="modal-overlay add">
+        <div class="modal">
+            <div id="form">
+                <h2 class="title-form">Nova Cidade</h2>
+                <form action="" onsubmit="Form.submit(event)">
+                    <div class="input-group">
+                        <input type="text" name="city" id="city" placeholder="Cidade">
+                    </div>
+                    <div class="input-group">
+                        <input type="text" name="state" id="state" placeholder="Estado">
+                    </div>
+                    <div class="input-group">
+                        <input type="text" name="country" id="country" placeholder="País">
+                    </div>
+                    <div class="button-group">
+                        <input type="button" class="button cancel" value="Cancelar" onclick="Modal.modalAddClose()">
+                        <input type="button" class="button form-add" value="Adicionar">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+<script src="script.js"></script>
 </body>
 </html>
