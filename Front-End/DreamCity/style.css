@@ -89,6 +89,21 @@ body {
     color: #f4f4f4;
 }
 
+.button.confirm-delete {
+    background: var(--button-red-background);
+    border: none;
+    color: #f4f4f4;
+    font-size: 1rem;
+    padding: 1rem 1.5rem 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.button.confirm-delete:hover {
+    box-shadow: rgba(255, 0, 0, 0.801) 0px 5px 15px;
+}
+
 /*============== HEADER ===============*/
 
 #header {
@@ -190,7 +205,7 @@ table tbody tr:hover, table thead:hover{
     transition-delay: 0.3s;
 }
 
-.modal-overlay.add.active, .modal-overlay.confirmAdd.active {
+.modal-overlay.add.active, .modal-overlay.confirmAdd.active, .modal-overlay.confirmDelete.active {
     opacity: 100;
     visibility: visible;
 }

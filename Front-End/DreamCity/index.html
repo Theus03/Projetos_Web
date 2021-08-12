@@ -36,24 +36,6 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>San Francisco</td>
-                        <td>Califórnia</td>
-                        <td>Estados Unidos</td>
-                        <td><img class="icon-delete" src="./img/delete.png" title="Excluir" alt=""></td>
-                    </tr>
-                    <tr>
-                        <td>Brooklyn</td>
-                        <td>New York</td>
-                        <td>Estados Unidos</td>
-                        <td><img class="icon-delete" src="./img/delete.png" title="Excluir" alt=""></td>
-                    </tr>
-                    <tr>
-                        <td>Liverpool</td>
-                        <td>Merseyside</td>
-                        <td>Reino Unido</td>
-                        <td><img class="icon-delete" src="./img/delete.png" title="Excluir" alt=""></td>
-                    </tr>
                 </tbody>
             </table>
         </section>
@@ -64,17 +46,17 @@
                 <h2 class="title-form">Nova Cidade</h2>
                 <form action="" onsubmit="Form.submit(event)">
                     <div class="input-group">
-                        <input type="text" name="city" id="city" placeholder="Cidade">
+                        <input type="text" name="name_city" id="name_city" placeholder="Cidade">
                     </div>
                     <div class="input-group">
-                        <input type="text" name="state" id="state" placeholder="Estado">
+                        <input type="text" name="name_state" id="name_state" placeholder="Estado">
                     </div>
                     <div class="input-group">
-                        <input type="text" name="country" id="country" placeholder="País">
+                        <input type="text" name="name_country" id="name_country" placeholder="País">
                     </div>
                     <div class="button-group">
                         <input type="button" class="button cancel" value="Cancelar" onclick="Modal.modalAddClose()">
-                        <input type="button" class="button form-add" value="Adicionar" onclick="Modal.modalConfAddOpen();">
+                        <input type="submit" class="button form-add" value="Adicionar">
                     </div>
                 </form>
             </div>
@@ -92,8 +74,24 @@
                     <div class="button-group">
                         <input type="button" class="button form-add" value="OK" onclick="Modal.modalConfAddClose()">
                     </div>
-                </form>
-                
+                </form> 
+            </div>
+        </div>
+    </div>
+    <div class="modal-overlay confirmDelete">
+        <div class="modal">
+            <div id="form">
+                <h2 class="title-form">Tem certeza que você<br> deseja excluir?</h2>
+                <form action="" onsubmit="Game.submitDelete(event)">
+                    <div class="container-animation">
+                        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+                        <lottie-player src="./img/confirmDelete.json" class="animation"  background="transparent"  speed="1" autoplay></lottie-player>
+                    </div>
+                    <div class="button-group">
+                        <input type="button" class="button cancel" value="Cancelar" onclick="Modal.modalConfDeleteClose()">
+                        <input type="submit" class="button confirm-delete" value="Excluir" onclick="City.remove()">
+                    </div>
+                </form> 
             </div>
         </div>
     </div>
