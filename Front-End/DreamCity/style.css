@@ -75,7 +75,7 @@ body {
 }
 
 .button.cancel {
-    border: solid 3px var(--button-red-background);
+    border: solid 2px var(--button-red-background);
     color: var(--button-red-background);
     font-size: 1rem;
     padding: 1rem 1.5rem 1rem;
@@ -186,10 +186,15 @@ table tbody tr:hover, table thead:hover{
     transition: 0.4s;
 }
 
-.modal-overlay.add.active {
+.modal-overlay.confirmAdd.active {
+    transition-delay: 0.3s;
+}
+
+.modal-overlay.add.active, .modal-overlay.confirmAdd.active {
     opacity: 100;
     visibility: visible;
 }
+
 
 .modal {
     background-color: var(--modal-background);
@@ -232,6 +237,18 @@ form {
 
 .input-group input:focus {
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.container-animation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.animation {
+    background: transparent;
+    width: 10rem;
+    height: 10rem;
 }
 
 /*=========== RESPONSIVO =================*/

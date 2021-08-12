@@ -74,12 +74,29 @@
                     </div>
                     <div class="button-group">
                         <input type="button" class="button cancel" value="Cancelar" onclick="Modal.modalAddClose()">
-                        <input type="button" class="button form-add" value="Adicionar">
+                        <input type="button" class="button form-add" value="Adicionar" onclick="Modal.modalConfAddOpen();">
                     </div>
                 </form>
             </div>
         </div>
     </div>
-<script src="script.js"></script>
+    <div class="modal-overlay confirmAdd">
+        <div class="modal">
+            <div id="form">
+                <h2 class="title-form">Cidade Adicionada<br> com sucesso!</h2>
+                <form action="">
+                    <div class="container-animation">
+                        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+                        <lottie-player src="./img/confirmAdd.json" class="animation"  background="transparent"  speed="1" autoplay></lottie-player>
+                    </div>
+                    <div class="button-group">
+                        <input type="button" class="button form-add" value="OK" onclick="Modal.modalConfAddClose()">
+                    </div>
+                </form>
+                
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
