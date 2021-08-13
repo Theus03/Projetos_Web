@@ -1,0 +1,202 @@
+/*=========== GLOBAL ================*/
+
+:root {
+    --background-body: #FFF;
+    --background-nav: #5942E3;
+    --background-nav-hover: #6F5BE9;
+    --background-thead: #D2D2D2;
+    --background-tbody: #ECECEC;
+    --background-modal: #E5E5E5;
+    --background-button-add: #2FCC71;
+    --color-text: #000;
+    --color-text-total: #8A8A8A;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 93.75%;
+}
+
+body {
+    background-color: var(--background-body);
+    font-family: 'Lato', sans-serif;
+}
+
+#container-main {
+    width: min(90vw, 800px);
+    margin: auto;
+}
+
+#loc {
+    background-color: var(--background-nav-hover);
+}
+
+/*========== TEXTS ========================*/
+.text-title {
+   font-size: 2.5rem; 
+}
+
+/*========== NAVBAR =======================*/
+aside {
+    position: fixed;
+    left: 0;
+    width: 6%;
+}
+
+nav {
+    background-color: var(--background-nav);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0rem 25px 25px 0px;
+}
+
+.logo {
+    width: 4rem;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+
+ul {
+    margin-bottom: 15.9rem;
+}
+
+a li {
+    padding: 1rem 1.8rem 1rem;
+    transition: 0.4s;
+    border-radius: 25px 0px 25px 0px;
+}
+
+
+a li:hover {
+    background-color: var(--background-nav-hover);
+}
+
+li{
+    list-style: none;
+    margin-top: 2rem;
+}
+
+.icon-nav {
+    width: 2.5rem;
+}
+
+/*=========== MAIN =====================*/
+
+.container-title {
+    padding-top: 6rem;
+}
+
+/*=========== TABLE ==================*/
+#container-table {
+    overflow: auto;
+}
+
+
+#data-table {
+    width: 100%;
+    border-spacing: 0rem 0.5rem;
+    margin-top: 1.5rem;
+    overflow: auto;
+}
+
+table thead tr th:first-child,
+table tbody tr td:first-child{
+    border-radius: 0.40rem 0 0 0.40rem;
+}
+
+table thead tr th:last-child,
+table tbody tr td:last-child{
+    border-radius: 0 0.40rem 0.40rem 0;
+}
+
+table thead th {
+    background: var(--background-thead);
+    padding: 1rem 2rem;
+    font-weight: 400;
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+table tbody td {
+    background: var(--background-tbody);
+    padding: 1rem 2rem;
+    font-weight: 400;
+    text-align: center;
+    font-size: 1rem;
+}
+
+table tbody tr:hover, table thead:hover{
+    opacity: 90%;
+    transition: 0.4s;
+}
+
+.icon-delete {
+    width: 2.5rem;
+    cursor: pointer;
+}
+
+
+/*=========== RESPONSIVE =============*/
+
+@media(max-width: 800px) {
+     /*============= GLOBAL ================*/
+
+     html{
+        font-size: 87.5%;
+    }
+    body {
+        height: 200vh;
+    }
+
+    /*============= NAVBAR =====================*/
+    aside {
+        position: relative;
+        bottom: 0;
+        width: 100%;
+    }
+    
+    nav {
+        background-color: var(--background-nav);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: start;
+        border-radius: 0rem 0px 25px 25px;
+    }
+    
+    .logo {
+        width: 3rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+    
+    ul {
+        margin-bottom: 0rem;
+        display: flex;
+    }
+
+    a li {
+        padding: 0.5rem 1rem 0.5rem;
+        transition: 0.4s;
+        border-radius: 25px 0px 25px 0px;
+    }
+
+    
+    li{
+        list-style: none;
+        margin-top: 1rem;
+    }
+
+    .icon-nav {
+        width: 2rem;
+    }
+
+    
+}
