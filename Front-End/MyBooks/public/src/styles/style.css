@@ -47,6 +47,21 @@ body {
    font-size: 2.5rem; 
 }
 
+.title-result {
+    font-size: 2rem;
+    font-weight: 400;
+    color: var(--color-text-total);
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+
+.number-result {
+    font-size: 6rem;
+    font-weight: 800;
+    color: var(--color-text-total);
+    text-transform: uppercase;
+}
+
 /*========== NAVBAR =======================*/
 aside {
     position: fixed;
@@ -189,6 +204,28 @@ table tbody tr:hover, table thead:hover{
 
 .button-group input:hover {
     background-color: #17ee70;
+}
+
+/*=========== TOTAL =================*/
+.container-box {
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.box {
+    background-color: var(--background-modal);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem 7rem 4rem;
+    border-radius: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    transition: 0.4s;
+}
+
+.box:hover{
+    transform: scale(1.1);
 }
 
 /*=========== RESPONSIVE =============*/
