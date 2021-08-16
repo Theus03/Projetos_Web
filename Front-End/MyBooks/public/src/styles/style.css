@@ -115,6 +115,9 @@ li{
     display: flex;
 }
 
+.container-title.home {
+    justify-content: space-between;
+} 
 /*=========== TABLE ==================*/
 .container-table {
     overflow: auto;
@@ -226,6 +229,33 @@ table tbody tr:hover, table thead:hover{
 
 .box:hover{
     transform: scale(1.1);
+}
+
+/*========== MODAL ===================*/
+.modal-overlay {
+    display: flex;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.4s;
+}
+
+.modal-overlay.active {
+    opacity: 100;
+    visibility: visible;
+}
+
+.modal {
+    background-color: var(--background-modal);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 0.5rem 10rem 0.5rem 1rem;
+    border-radius: 5px;
+}
+
+.modal img {
+    width: 2rem;
+    margin-right: 1rem;
 }
 
 /*=========== RESPONSIVE =============*/
