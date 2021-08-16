@@ -37,6 +37,11 @@ body {
     background-color: var(--background-nav-hover);
 }
 
+.icon-back {
+    width: 3.5rem;
+    margin-right: 1.8rem;
+}
+
 /*========== TEXTS ========================*/
 .text-title {
    font-size: 2.5rem; 
@@ -92,13 +97,13 @@ li{
 
 .container-title {
     padding-top: 6rem;
+    display: flex;
 }
 
 /*=========== TABLE ==================*/
 .container-table {
     overflow: auto;
 }
-
 
 #data-table {
     width: 100%;
@@ -143,6 +148,48 @@ table tbody tr:hover, table thead:hover{
     cursor: pointer;
 }
 
+/*========== FORM ====================*/
+.container-form, .container-total {
+    padding: 3rem 1rem 3rem;
+}
+
+.input-group{
+    margin-top: 0.5rem;
+}
+
+.input-group input {
+    background-color: var(--background-tbody);
+    width: 70%;
+    padding: 1.2rem;
+    border-radius: 5px;
+    border: none;
+    font-size: 1rem;
+}
+
+.input-group input::placeholder {
+    font-family: 'Poppins', sans-serif;
+    color: rgba(0, 0, 0, 0.50);
+}
+
+.button-group {
+    margin-top: 2rem;
+}
+
+.button-group input {
+    background-color: var(--background-button-add);
+    color: #fff;
+    padding: 1rem;
+    font-size: 1.3rem;
+    width: 40%;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.button-group input:hover {
+    background-color: #17ee70;
+}
 
 /*=========== RESPONSIVE =============*/
 
@@ -197,6 +244,21 @@ table tbody tr:hover, table thead:hover{
 
     .icon-nav {
         width: 2rem;
+    }
+
+    
+    /*========== FORM ====================*/
+    .container-form {
+        padding: 3rem 1rem 3rem;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .input-group, .button-group{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
     
