@@ -353,10 +353,10 @@ table tbody tr:hover, table thead:hover{
     .modal-overlay.active {
         opacity: 100;
         visibility: visible;
+        margin-top: 1rem;
     }
 
     .modal {
-        margin-top: 1rem;
         background-color: var(--background-modal);
         display: flex;
         align-items: center;
