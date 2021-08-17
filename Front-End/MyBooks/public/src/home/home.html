@@ -34,7 +34,6 @@
                 </div>
             </div>
         </div>
-        <div class="container-table">
             <table id="data-table">
                 <thead>
                     <tr>
@@ -44,11 +43,26 @@
                         <th></th>
                     </tr>
                 </thead>
-                <tbody>
-                </tbody>
-            </table>
-        </div>     
-    </main>
+                <tbody></tbody>
+            </table>   
+            <div class="result-overlay">
+                <form action="../home/home.html" onsubmit="Form.submit(event)">
+                    <div class="input-group">
+                        <input type="text" name="name_book" id="name_book" placeholder="Nome do Livro">
+                    </div>
+                    <div class="input-group">
+                        <input type="text" name="name_genre" id="name_genre" placeholder="Gênero">
+                    </div>
+                    <div class="input-group">
+                        <input type="text" name="name_author" id="name_author" placeholder="Autor">
+                    </div>
+                    <div class="button-group">
+                        <input type="submit" value="Adicionar">
+                    </div>
+                </form>
+                <h1 id="number-result">3</h1> 
+            </div>  
+        </main>
 <script src="../scripts/script.js"></script>
 </body>
 </html>

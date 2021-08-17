@@ -28,8 +28,8 @@
             <h2 class="text-title">Adicionar Livro</h2>
         </div>
         <div class="container-form">
-            <div class="form">
-                <form action="" onsubmit="Form.submit(event)">
+            <div id="form">
+                <form action="../home/home.html" onsubmit="Form.submit(event)">
                     <div class="input-group">
                         <input type="text" name="name_book" id="name_book" placeholder="Nome do Livro">
                     </div>
@@ -45,7 +45,22 @@
                 </form>
             </div>
         </div>
+        <div class="result-overlay">
+            <table id="data-table">
+                <thead>
+                    <tr>
+                        <th>Nome do Livro</th>
+                        <th>Gênero</th>
+                        <th>Autor</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>     
+            <h1 id="number-result">3</h1>    
+        </div>
     </main>
+    
 <script src="../scripts/script.js"></script>
 </body>
 </html>

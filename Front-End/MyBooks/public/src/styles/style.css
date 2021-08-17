@@ -42,6 +42,12 @@ body {
     margin-right: 1.8rem;
 }
 
+.result-overlay {
+    visibility: hidden;
+    display: none;
+    clip: rect(0, 0, 0, 0);
+}
+
 /*========== TEXTS ========================*/
 .text-title {
    font-size: 2.5rem; 
@@ -55,7 +61,7 @@ body {
     margin-bottom: 2rem;
 }
 
-.number-result {
+#number-result {
     font-size: 6rem;
     font-weight: 800;
     color: var(--color-text-total);
