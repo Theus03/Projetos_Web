@@ -23,10 +23,19 @@
         </nav>
     </aside>
     <main id="container-main">
-        <div class="container-title">
-            <a onclick="Back.back()" style="cursor: pointer;"><img src="../icons/arrow-back.svg" alt="Voltar" class="icon-back"></a>
-            <h2 class="text-title">Adicionar Livro</h2>
+        <div class="container-header">
+            <div class="container-title home">
+                <a onclick="Back.back()" style="cursor: pointer;"><img src="../icons/arrow-back.svg" alt="Voltar" class="icon-back"></a>
+                <h2 class="text-title">Adicionar Livro</h2>
+                <div class="modal-overlay">
+                    <div class="modal">
+                        <img src="../icons/check.svg" alt="adicionado com sucesso">
+                        <h4 class="text-modal">Livro adicionado com sucesso!</h4>   
+                    </div>
+                </div>
+            </div>
         </div>
+        
         <div class="container-form">
             <div id="form">
                 <form action="../home/home.html" onsubmit="Form.submit(event)">
