@@ -2,6 +2,7 @@ const Modal = {
     modalSucessOpen() {
         document.querySelector('.modal-overlay')
             .classList.add('active');
+        modalSucessClose();
     },
     modalSucessClose() {
         setTimeout((function(){
@@ -9,6 +10,12 @@ const Modal = {
                 .classList.remove('active')
         }, 1000))
     }
+}
+
+const Back = {
+    back() {
+        window.history.back();
+        }
 }
 
 const Storage = {
@@ -106,8 +113,8 @@ const Form = {
         const { name_book, name_genre, name_author } = Form.getValues()
 
         // verifica se os campos estão vazios, caso estejam retornam uma mensagem de erro
-        if(name_book.trim() === "" || name_genre.trim() === "" || name_author.trim() === ""){
-            throw new Error("Por favor, preencha todos os campos.")
+        if(name_book.trim() === ""){
+            throw new Error("Por favor, preencha o campo nome, é obrigatório.")
         }
     },
 
@@ -138,8 +145,8 @@ const Form = {
             const book = Form.formatValues()
             Book.add(book)
             Form.clearFields()
+            Modal.modalSucessOpen()
             location.href = "../home/home.html"
-            Modal.modalSucessOpen();
         } catch (error) {
             alert(error.message)
         }
