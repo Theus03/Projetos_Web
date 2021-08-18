@@ -79,6 +79,7 @@ body {
 }
 .text-no-book {
     visibility: hidden;
+    display: none;
 }
 
 /*========== NAVBAR =======================*/

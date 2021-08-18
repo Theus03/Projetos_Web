@@ -57,7 +57,7 @@ if(Book.all.length > 0){
 }
 
 const DOM = {
-    // definindo o container das cidades
+    // definindo o container dos livros
     booksContainer: document.querySelector('#data-table tbody'),
     
     
@@ -88,7 +88,7 @@ const DOM = {
         },
         
         updateTotal() {
-            // atualiza o total de cidades
+            // atualiza o total de livros
             document.querySelector('#number-result').innerHTML = Book.total();
         },
         
@@ -140,7 +140,7 @@ const DOM = {
             Form.name_author.value = ""
         },
         
-        // aqui ocorre o envio das informações do formulário, assim é chamado a função add para adicionar as informações da cidade na tabela
+        // aqui ocorre o envio das informações do formulário, assim é chamado a função add para adicionar as informações dos livros na tabela
         submit(event) {
             event.preventDefault()
             
