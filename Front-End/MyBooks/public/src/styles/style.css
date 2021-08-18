@@ -68,6 +68,19 @@ body {
     text-transform: uppercase;
 }
 
+.text-no-book.add{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+    color: var(--color-text-total);
+    visibility: visible;
+}
+.text-no-book {
+    visibility: hidden;
+}
+
 /*========== NAVBAR =======================*/
 aside {
     position: fixed;

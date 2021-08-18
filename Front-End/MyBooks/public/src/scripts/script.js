@@ -29,6 +29,7 @@ const Book = {
     all: Storage.get(),
     
     add(book) {
+        
         Book.all.push(book)
         
         App.reload()
@@ -50,6 +51,10 @@ const Book = {
         return totalBook;
     }
 }
+// validando se tem livros na tabela
+if(Book.all.length > 0){
+    document.querySelector('.text-no-book').classList.remove('add');
+}
 
 const DOM = {
     // definindo o container das cidades
@@ -67,6 +72,8 @@ const DOM = {
     },
     
     innerHTMLBook(book, index) {
+        
+
         // estrutura html da tabela
         const html = `
         <tr>
