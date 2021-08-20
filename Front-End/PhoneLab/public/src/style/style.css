@@ -61,7 +61,7 @@ header {
 
 /*======= SECTION TITLE ===========*/
 .section-title {
-    padding: 5rem 0.5rem 2rem;
+    padding: 3.5rem 0.5rem 2rem;
     display: flex;
     justify-content:space-between;
     align-items: center;
@@ -208,6 +208,4 @@ footer {
     .text-new-phone {
         color: var(--color-text-new-phone);
     }
-
- 
 }
