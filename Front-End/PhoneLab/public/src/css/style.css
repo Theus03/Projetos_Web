@@ -141,6 +141,118 @@ table tbody td {
     color: #fff
 }
 
+/*======= MODAL ==============*/
+.modal-overlay {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(53, 53, 53, 0.7);
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1;
+    transition: 0.4s;
+}
+
+.modal-overlay.active {
+    opacity: 100;
+    visibility: visible;
+}
+
+.modal {
+    background-color: var(--background-tbody);
+    border-radius: 5px;
+    width: 50%;
+    padding: 0rem 0rem 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+.form-header {
+    background-color: var(--color-title-section);
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+}
+
+.form-header img{
+    width: 3.5rem;
+}
+
+.form-header h2 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #fff;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-right: 10rem;
+}
+
+.input-group{
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-group input{
+    width: 70%;
+    background: none;
+    border: none;
+    border-bottom: solid 3px #707070;
+    margin-top: 2rem;
+    text-align: center;
+    outline: none;
+    font-size: 1.3rem;
+    font-weight: 400;
+    transition: 0.4s
+}
+
+.input-group input:focus {
+    border-bottom: solid 3px var(--background-header-footer);
+}
+.input-group input::placeholder {
+    font-style: italic;
+    opacity: 70%;
+}
+
+.input-buttons {
+    margin-top: 4rem;
+    display: flex;
+    justify-content: center;
+}
+
+.input-buttons input {
+    width: 30%;
+    margin-left: 1rem;
+    padding: 1rem;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: 0.4rem;
+    font-size: 1.2rem;
+    font-weight: 400;
+    transition: 0.4s;
+}
+
+.input-buttons input:hover {
+    transform: translateY(-10%);
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+.input-buttons .button-cancel {
+    background-color: var(--button-remove)
+}
+.input-buttons .button-add {
+    background-color: var(--color-text-new-phone)
+}
+
 /*======= FOOTER =============*/
 
 footer {
@@ -208,4 +320,51 @@ footer {
     .text-new-phone {
         color: var(--color-text-new-phone);
     }
+
+    /*=========== MODAL ==============*/
+        
+    .modal {
+        background-color: var(--background-tbody);
+        border-radius: 5px;
+        width: 100%;
+        height: 100%;
+        padding: 0rem 0rem 2rem;
+        position: relative;
+        z-index: 1;
+    }
+    .form-header {
+        justify-content: left;
+    }
+    .form-header h2 {
+        font-size: 1.2rem;
+    }
+        
+    .input-group input{
+        width: 70%;
+        background: none;
+        border: none;
+        border-bottom: solid 3px #707070;
+        margin-top: 2rem;
+        text-align: center;
+        outline: none;
+        font-size: 1.2rem;
+        font-weight: 400;
+        transition: 0.4s
+    }
+        
+    .input-buttons input {
+        width: 30%;
+        margin-left: 1rem;
+        padding: 0.5rem;
+        text-transform: uppercase;
+        text-align: center;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        transition: 0.4rem;
+        font-size: 1.2rem;
+        font-weight: 400;
+        transition: 0.4s;
+    }
+
 }

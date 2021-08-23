@@ -18,7 +18,7 @@
     <main id="container-main">
         <section class="section-title">
             <h2 class="text-title-section">Gerenciamento dos Celulares</h2>
-            <a href="" class="text-new-phone">+ Adicionar Novo Celular</a>
+            <a href="#" class="text-new-phone" onclick="Modal.openModal()">+ Adicionar Novo Celular</a>
         </section>
         <section class="section-table">
             <table id="data-table">
@@ -50,6 +50,27 @@
             </table>
         </section>
     </main>
+    <div class="modal-overlay">
+        <div class="modal">
+            <form action="">
+                <div class="form-header">
+                    <a href="#" onclick="Modal.closeModal()"><img src="../icons/back-arrow.png" alt="" class="img-arrow-back"></a>
+                    <h2 class="modal-title">Registrar Novo Celular</h2>
+                </div>
+                <div class="input-group">
+                    <input type="text" placeholder="Modelo">
+                    <input type="text" placeholder="Marca">
+                    <input type="text" placeholder="Armazenamento">
+                    <input type="text" placeholder="Memória(RAM)">
+                    <input type="text" placeholder="Bateria">
+                </div>
+                <div class="input-buttons">
+                    <input type="button" value="Cancelar" class="button-cancel" onclick="Modal.closeModal()">
+                    <input type="submit" value="Adicionar" class="button-add">
+                </div>
+            </form>
+        </div>
+    </div>
     <footer>
         <h3 class="text-footer">&copy;PhoneLab</h3>
     </footer>
