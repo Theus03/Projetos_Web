@@ -76,6 +76,8 @@ header {
 .text-new-phone {
     color: var(--color-text-new-phone);
     transition: 0.25s;
+    cursor: pointer;
+    text-decoration: underline;
 }
 
 .text-new-phone:hover {
@@ -226,7 +228,7 @@ table tbody td {
     justify-content: center;
 }
 
-.input-buttons input {
+.input-buttons button {
     width: 30%;
     margin-left: 1rem;
     padding: 1rem;
