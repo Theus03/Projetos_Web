@@ -46,7 +46,7 @@ const CRUD = {
 
 
 const DOM = {
-    addPhone() {
+    addPhone(phone, index) {
         const tr = document.createElement('tr')
         tr.innerHTML = `
             <td>${phone.modelo}</td>
@@ -70,8 +70,8 @@ const DOM = {
     },
 
     updateTable() {
-        const dbPhone = readPhone()
-        DOM.clearTable()
+        const dbPhone = CRUD.read()
+        clearTable()
         dbPhone.forEach(addPhone)
     }
 }
@@ -105,8 +105,8 @@ const Form = {
                 DOM.updateTable()
                 Modal.closeModal()
             } else {
-                CRUD.update(indexphone)
-                DOM.updateTable(index, phone)
+                CRUD.update(index, phone)
+                DOM.updateTable()
                 Modal.closeModal()
             }
         }
