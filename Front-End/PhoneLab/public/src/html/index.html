@@ -39,13 +39,13 @@
     </main>
     <div class="modal-overlay">
         <div class="modal">
-            <form action="" id="form" class="modal-form">
+            <form id="form" class="modal-form">
                 <div class="form-header">
-                    <a href="#" onclick="Modal.closeModal()"><img src="../icons/back-arrow.png" alt="" class="img-arrow-back"></a>
+                    <a href="" onclick="Modal.closeModal()"><img src="../icons/back-arrow.png" alt="" class="img-arrow-back"></a>
                     <h2 class="modal-title">Registrar Novo Celular</h2>
                 </div>
                 <div class="input-group">
-                    <input type="text" id="modelo" class="modal-field" placeholder="Modelo">
+                    <input type="text" id="modelo" data-index="new" class="modal-field" placeholder="Modelo">
                     <input type="text" id="marca" class="modal-field" placeholder="Marca">
                     <input type="text" id="armazenamento" class="modal-field" placeholder="Armazenamento">
                     <input type="text" id="memoria" class="modal-field" placeholder="Memória(RAM)">
@@ -53,7 +53,7 @@
                 </div>
                 <div class="input-buttons">
                     <button class="button-cancel" onclick="Modal.closeModal()">Cancelar</button>
-                    <button id="add-phone" class="button-add">Adicionar</button>
+                    <button id="addPhone" class="button-add">Salvar</button>
                 </div>
             </form>
         </div>
@@ -61,6 +61,6 @@
     <footer>
         <h3 class="text-footer">&copy;PhoneLab</h3>
     </footer>
-<script src="../js/script.js"></script>
+<script src="../js/script.js" defer></script>
 </body>
 </html>

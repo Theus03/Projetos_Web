@@ -87,6 +87,7 @@ header {
 /*======== TABLE =============*/
 .section-table {
     overflow: auto;
+    margin-bottom: 5rem;
 }
 
 #data-table {
@@ -113,7 +114,7 @@ table tbody td {
     display: grid;
 }
 
-.container-buttons input {
+.container-buttons button {
     margin-top: 0.2rem;
     background-color:none;
     padding: 0.5rem 1rem 0.5rem;
@@ -236,14 +237,14 @@ table tbody td {
     text-align: center;
     color: #fff;
     border: none;
-    cursor: pointer;
     transition: 0.4rem;
     font-size: 1.2rem;
     font-weight: 400;
+    cursor: pointer;
     transition: 0.4s;
 }
 
-.input-buttons input:hover {
+.input-buttons button:hover {
     transform: translateY(-10%);
     box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 }
