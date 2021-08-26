@@ -30,7 +30,7 @@ body {
 
 /*====== HEADER =========*/
 header {
-    background-color: var(--background-header-footer)
+    background-color: var(--background-header-footer);
 }
 
 .container-header {
