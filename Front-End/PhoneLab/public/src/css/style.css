@@ -100,6 +100,7 @@ table thead th {
     background-color: var(--background-thead);
     color: var(--color-text-table);
     padding: 1.5rem;
+    transition: 0.4s;
 }
 
 table tbody td {
@@ -107,7 +108,6 @@ table tbody td {
     padding: 1rem;
     text-align: center;
     color: var(--color-text-table);
-
 }
 
 .container-buttons {
