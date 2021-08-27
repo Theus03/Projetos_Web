@@ -50,12 +50,14 @@ const isValidFields = () => {
 
 //Interação com o layout
 
+// limpando os campos
 const clearFields = () => {
     const fields = document.querySelectorAll('.modal-field')
     fields.forEach(field => field.value = "")
     document.getElementById('modelo').dataset.index = 'new'
 }
 
+// salvando o celular
 const savePhone = () => {
     if (isValidFields()) {
         const phone = {

@@ -75,7 +75,7 @@ header {
 
 .text-new-phone {
     color: var(--color-text-new-phone);
-    transition: 0.25s;
+    transition:  0.25s;
     cursor: pointer;
     text-decoration: underline;
 }
