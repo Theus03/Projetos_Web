@@ -1,0 +1,242 @@
+/*======== GLOBAL ===========*/
+:root {
+    --background-body: #1A1B1F;
+    --background-aside: #212329;
+    --background-tbody: #282931;
+    --background-thead: #3A3C47;
+    --red: #E73434;
+    --blue: #3482E7;
+    --white: #fff;
+    --gray: #313237;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 93.75%;
+}
+
+body {
+    background-color: var(--background-body);
+    overflow: auto;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+#container-main {
+    width: min(90vw, 800px);
+    margin: auto;
+}
+
+b {
+    color: var(--red);
+}
+
+a {
+    text-decoration: none;
+}
+
+#loc {
+    border-left: solid 5px var(--red);
+}
+
+/*======== NAVBAR ===========*/
+aside {
+    position: fixed;
+    left: 0;
+    width: 6%;
+}
+
+nav {
+    background-color: var(--background-aside);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+ul {
+    margin-bottom: 15.9rem;
+    margin-top: 10.9rem;
+}
+
+
+a li {
+    padding: 1rem 1.5rem 1rem 1.5rem;
+    transition: 0.4s;
+}
+
+a li:hover {
+    border-left: solid 8px var(--red);
+}
+
+li{
+    list-style: none;
+    margin-top: 2rem;
+}
+
+.logo.nav{
+    font: 900 2.5rem 'Noto Sans TC', sans-serif;
+    text-decoration: none;
+    color: #fff;
+    border: none;
+}
+.icon-nav {
+    text-align: center;
+    width: 2.5rem;
+}
+
+
+/*======== MAIN ===========*/
+.container-logo, .container-section{
+    text-align: center;
+    align-items: center;
+    padding-top: 5rem
+}
+
+.container-buttons {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    padding-top: 5rem
+}
+
+.logo {
+    font: 900 4rem 'Noto Sans TC', sans-serif;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.slogan {
+    font: 400 3rem 'Noto Sans JP', sans-serif;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.button {
+    background-color: red;
+    padding: 1rem;
+    width: 18rem;
+    margin-top: 1rem;
+    font: 300 1.8rem 'Noto Sans JP', sans-serif;
+    color: var(--white);
+    transition: 0.4s;
+}
+
+.button:hover{
+    margin-left: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
+}
+
+.button.add {
+    background: var(--red);
+}
+
+.button.list {
+    background: var(--gray);
+}
+
+
+/*======== RESPONSIVE ===========*/
+
+@media (max-width: 800px){
+
+    /*======== GLOBAL ===========*/
+    html {
+        font-size: 87.5%;
+    }
+    
+    body {
+        height: 200vh;
+    }
+    
+    /*======== NAVBAR ===========*/
+    aside {
+        position: relative;
+        bottom: 0;
+        width: 100%;
+    }
+
+    nav {
+        background-color: var(--background-aside);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: start;
+    }
+    
+    ul {
+        margin-top: 0rem;
+        margin-bottom: 0rem;
+        display: flex;
+    }
+
+  
+    a li {
+        padding: 1rem 1.5rem 1rem 1.5rem;
+        transition: 0.4s;
+    }
+
+    li{
+        list-style: none;
+        margin-top: 0rem;
+    }
+    
+    .logo.nav{
+        font: 900 1.3rem 'Noto Sans TC', sans-serif;
+        text-decoration: none;
+        color: #fff;
+        border: none;
+    }
+    .icon-nav {
+        text-align: center;
+        width: 2rem;
+    }
+    a li:hover {
+        border-left: none;
+        border-bottom: solid 5px var(--red);
+    }
+
+    /*======== MAIN ===========*/
+    
+    .container-logo, .container-section, .container-buttons{  
+        padding-top: 2rem
+    }
+    
+    .logo {
+        font: 900 3rem 'Noto Sans TC', sans-serif;
+        text-transform: uppercase;
+        color: #fff;
+    }
+
+    .slogan {
+        font: 400 2rem 'Noto Sans JP', sans-serif;
+        text-transform: uppercase;
+        color: #fff;
+    }
+    
+    .button {
+        background-color: red;
+        padding: 0.5rem;
+        width: 10rem;
+        margin-top: 1rem;
+        font: 300 1.3rem 'Noto Sans JP', sans-serif;
+        color: var(--white);
+        transition: 0.4s;
+    }
+  
+}
+
+@media (width: 1024px){
+
+    /*======== GLOBAL ===========*/
+    html {
+        font-size: 70.5%;
+    }
+    
+  
+}
