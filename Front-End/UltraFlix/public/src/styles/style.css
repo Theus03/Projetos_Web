@@ -290,6 +290,62 @@ table tbody td svg {
         color: var(--white);
         transition: 0.4s;
     }
+        
+    /*======== TABLE ===========*/
+    .text-title {
+        color: var(--white);
+        font-size: 1.5rem;
+        font-weight: 500;
+        text-transform: uppercase;
+    }
+
+    .text-title::before{
+        content: '|';
+        font-size: 2rem;
+        color: var(--red);
+    }
+
+    .container-table {
+        display: flex;
+        flex-direction: column;
+        overflow: auto;
+        margin-top: 3rem;
+    }
+
+    #data-table {
+        text-align: center;
+        overflow: auto;
+        border-spacing: 0rem 0.5rem;
+    }
+
+    table thead th {
+        background-color: var(--background-thead);
+        padding: 1rem 2rem;
+        font-weight: 500;
+        font-size: 1rem;
+        text-align: center;
+        color: var(--white);
+    }
+
+    table tbody td {
+        background-color: var(--background-tbody);
+        padding: 1rem 1rem;
+        font-weight: 400;
+        font-size: 1rem;
+        text-align: center;
+        color: var(--white);
+    }
+
+    table tbody td svg {
+        width: 2rem;
+        margin-right: 0.8rem;
+        font-weight: 400;
+        align-items: center;
+        cursor: pointer;
+        stroke: var(--background-thead);
+        transition: 0.4s;
+    }
+
   
 }
 
