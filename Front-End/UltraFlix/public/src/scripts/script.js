@@ -23,3 +23,11 @@ const styleForm = [
     }), 
 
 ]
+
+function modalOpen(){
+    document.querySelector('.modal-overlay').classList.add('active')
+}
+
+function modalClose() {
+    document.querySelector('.modal-overlay').classList.remove('active')
+}

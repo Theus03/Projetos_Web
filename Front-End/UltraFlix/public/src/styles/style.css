@@ -219,6 +219,89 @@ table tbody td svg {
     stroke: #E73434;
 }
 
+/*======== MODAL ===========*/
+.modal-overlay {
+    width: 100%;
+    height: 100%;
+    background-color: #1a1b1f85;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1;
+    transition: 0.4s;
+}
+
+.modal-overlay.active {
+    opacity: 100;
+    visibility: visible;
+}
+
+.modal {
+    overflow: auto;
+    background-color: var(--background-aside);
+    width: 40%;
+    padding: 2rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-modal {
+    width: 60%;
+    font-size: 1.5rem;
+    text-align: center;
+    font-weight: 400;
+    color: var(--white);
+    margin-bottom: 1.8rem;
+}
+
+.img-modal {
+    width: 6rem;
+    font-weight: 400;
+    stroke: var(--red);
+}
+
+.modal-buttons {
+    margin-top: 1.8rem;
+    display: flex;
+    flex-direction:row;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-modal {
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+    padding: 0.8rem;
+    width: 10rem;
+    margin-top: 1rem;
+    font: 300 1.3rem 'Noto Sans JP', sans-serif;
+    color: var(--white);
+    transition: 0.4s;
+    border: none;
+    cursor: pointer;
+}
+
+.button-modal:hover {
+    margin-top: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
+}
+
+.button-modal.cancelar {
+    background-color: var(--gray)
+}
+
+.button-modal.remover {
+    background-color: var(--red)
+}
+
 /*======== FORM ===========*/
 .container-form {
     margin-top: 3rem;
@@ -430,6 +513,81 @@ table tbody td svg {
         stroke: var(--background-thead);
         transition: 0.4s;
     }
+        
+    /*======== MODAL ===========*/
+    .modal-overlay {
+        width: 100%;
+        height: 80%;
+        background-color: #1a1b1f85;
+        position: fixed;
+        top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: auto;
+    }
+    .modal {
+        overflow: auto;
+        background-color: var(--background-aside);
+        width: 95%;
+        padding: 1rem;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .text-modal {
+        width: 60%;
+        font-size: 1rem;
+        text-align: center;
+        font-weight: 400;
+        color: var(--white);
+        margin-bottom: 1rem;
+    }
+
+    .img-modal {
+        width: 4rem;
+        font-weight: 400;
+        stroke: var(--red);
+    }
+
+    .modal-buttons {
+        margin-top: 1rem;
+        margin-bottom: 1.5rem;
+        display: flex;
+        flex-direction:row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .button-modal {
+        margin-right: 0.5rem;
+        margin-left: 0.5rem;
+        padding: 0.8rem;
+        width: 8rem;
+        margin-top: 1rem;
+        font: 300 1rem 'Noto Sans JP', sans-serif;
+        color: var(--white);
+        transition: 0.4s;
+        border: none;
+        cursor: pointer;
+    }
+
+    .button-modal:hover {
+        margin-top: 1rem;
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
+    }
+
+    .button-modal.cancelar {
+        background-color: var(--gray)
+    }
+
+    .button-modal.remover {
+        background-color: var(--red)
+    }
+
 
   
 }
@@ -440,4 +598,31 @@ table tbody td svg {
     html {
         font-size: 70.5%;
     }
+        
+    /*======== MODAL ===========*/
+    .modal-overlay {
+        width: 100%;
+        height: 50%;
+        background-color: #1a1b1f85;
+        position: fixed;
+        top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: auto;
+    }
+
+    .modal {
+        overflow: auto;
+        background-color: var(--background-aside);
+        width: 50%;
+        padding: 2rem;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+
 }
