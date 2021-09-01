@@ -167,6 +167,10 @@ li{
     color: var(--red);
 }
 
+.text-title.edit::before {
+    color: var(--blue)
+}
+
 .container-table {
     display: flex;
     flex-direction: column;
@@ -269,6 +273,10 @@ table tbody td svg {
     transition: 0.4s;
     border: none;
     cursor: pointer;
+}
+
+.button-group.edit input {
+    background-color: var(--blue);
 }
 
 .button-group input:hover {

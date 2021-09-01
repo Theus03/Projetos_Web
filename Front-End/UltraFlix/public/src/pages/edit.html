@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../icons/favicon.jpg" type="image/x-icon">
+    <title>Editar - UltraFlix</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500&family=Noto+Sans+TC:wght@900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/style.css">
+</head>
+<body>
+    <aside>
+        <nav>
+            <ul>
+                <a  href="../pages/myList.html" title="Lista"><li><img class="icon-nav" src="../icons/list.svg" alt=""></li></a>
+                <a href="../home/home.html" title="Logo"><li class="logo nav">U<b>F</b></li></a>
+                <a href="../pages/add.html" title="Adicionar"><li><img class="icon-nav" src="../icons/plus.svg" alt=""></li></a>
+            </ul>
+        </nav>
+    </aside>
+    <main id="container-main">
+        <div class="container-header">
+            <h2 class="text-title edit"> Editar</h2>
+        </div>
+        <div class="container-form">
+            <form action="">
+                <div class="input-group">
+                    <label class="sr-only nome" for="nome">Nome</label>
+                    <input type="text" id="nome" placeholder="Nome">
+                </div>
+                <div class="input-group">
+                    <label class="sr-only tipo" for="tipo">Tipo (Exemplo: Filme, série, minissérie, etc)</label>
+                    <input type="text" id="tipo" placeholder="Tipo (Exemplo: Filme, série, minissérie, etc)">
+                </div>
+                <div class="input-group">
+                    <label class="sr-only genero" for="genero">Gênero</label>
+                    <input type="text" id="genero" placeholder="Gênero">
+                </div>
+                <div class="input-group">
+                    <label class="sr-only plataforma" for="plataforma">Plataforma</label>
+                    <input type="text" id="plataforma" placeholder="Plataforma">
+                </div>
+                <div class="button-group edit">
+                    <input type="submit" value="Salvar">
+                </div>
+            </form>
+        </div>
+    </main>
+<script src="../scripts/script.js"></script>
+</body>
+</html>
