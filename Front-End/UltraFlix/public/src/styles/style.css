@@ -244,6 +244,7 @@ table tbody td svg {
 .modal {
     overflow: auto;
     background-color: var(--background-aside);
+    border: solid 1px var(--red);
     width: 40%;
     padding: 2rem;
     position: relative;
