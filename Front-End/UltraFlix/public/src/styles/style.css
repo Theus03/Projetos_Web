@@ -43,6 +43,18 @@ a {
     border-left: solid 10px var(--red);
 }
 
+.sr-only {
+    visibility: hidden;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+    margin-bottom: 0.3rem;
+    color: var(--white);
+    font-weight: 500;
+    transition: 0.4s;
+}
+
 /*======== NAVBAR ===========*/
 aside {
     position: fixed;
@@ -120,7 +132,6 @@ li{
 }
 
 .button {
-    background-color: red;
     padding: 1rem;
     width: 18rem;
     margin-top: 1rem;
@@ -203,6 +214,68 @@ table tbody td svg {
 .icon-delete:hover {
     stroke: #E73434;
 }
+
+/*======== FORM ===========*/
+.container-form {
+    margin-top: 3rem;
+}
+
+.container-form form {
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-group {
+    width: 60%;
+    display: flex;
+    flex-direction:column;
+    margin-top: 1rem;
+}
+
+.input-group input {
+    background: var(--background-thead);
+    border: none;
+    outline: none;
+    padding: 1rem;
+    font-size: 1rem;
+    color: var(--white);
+    transition: 0.4s;
+}
+
+.input-group input::placeholder {
+    color: var(--white);
+    opacity:50%;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.input-group input:focus {
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
+}
+
+.button-group {
+    margin-top: 2rem;
+}
+
+.button-group input {
+    background-color: var(--red);
+    padding: 0.5rem;
+    width: 18rem;
+    margin-top: 1rem;
+    font: 300 1.5rem 'Noto Sans JP', sans-serif;
+    color: var(--white);
+    transition: 0.4s;
+    border: none;
+    cursor: pointer;
+}
+
+.button-group input:hover {
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
+    margin-left: 0.5rem;
+}
+
 /*======== RESPONSIVE ===========*/
 
 @media (max-width: 800px){
@@ -216,6 +289,10 @@ table tbody td svg {
         height: 200vh;
     }
     
+    #loc {
+        border-left: none;
+        border-bottom: solid 5px var(--red);
+    }
     /*======== NAVBAR ===========*/
     aside {
         position: relative;
@@ -355,6 +432,4 @@ table tbody td svg {
     html {
         font-size: 70.5%;
     }
-    
-  
 }
