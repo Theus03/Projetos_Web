@@ -37,16 +37,38 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                       
-                    </tr>
                 </tbody>
             </table>
+        </div>
+        <div class="result-overlay">
+            <div class="container-form">
+                <form id="form">
+                    <div class="input-group">
+                        <label class="sr-only nome" for="nome">Nome</label>
+                        <input class="input-form" data-index="new" type="text" id="nome" placeholder="Nome">
+                    </div>
+                    <div class="input-group">
+                        <label class="sr-only tipo" for="tipo">Tipo (Exemplo: Filme, série, minissérie, etc)</label>
+                        <input class="input-form" type="text" id="tipo" placeholder="Tipo (Exemplo: Filme, série, minissérie, etc)">
+                    </div>
+                    <div class="input-group">
+                        <label class="sr-only genero" for="genero">Gênero</label>
+                        <input class="input-form" type="text" id="genero" placeholder="Gênero">
+                    </div>
+                    <div class="input-group">
+                        <label class="sr-only plataforma" for="plataforma">Plataforma(Netflix, Disney +, etc...)</label>
+                        <input class="input-form" type="text" id="plataforma" placeholder="Plataforma(Netflix, Disney +, etc...)">
+                    </div>
+                    <div class="button-group">
+                        <button id="addFlix">Adicionar</button>
+                    </div>
+                </form>
+            </div>
         </div>
     </main>
     <div class="modal-overlay">
         <div class="modal">
-            <h2 class="text-modal">Tem certeza que deseja remover Friends da sua lista?</h2>
+            <h2 class="text-modal">Tem certeza que deseja remover <p id="nome-flix"></p> da sua lista?</h2>
             <svg xmlns="http://www.w3.org/2000/svg"   viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" class="img-modal"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg>
             <div class="modal-buttons">
                 <button class="button-modal cancelar" onclick="modalClose()">Cancelar</button>
@@ -54,6 +76,7 @@
             </div>
         </div>
     </div>
+   
 <script src="../scripts/script.js"></script>
 </body>
 </html>

@@ -55,6 +55,13 @@ a {
     transition: 0.4s;
 }
 
+.result-overlay {
+    display: none;
+    clip: rect(0, 0, 0, 0);
+    visibility: hidden;
+}
+
+
 /*======== NAVBAR ===========*/
 aside {
     position: fixed;
@@ -347,7 +354,7 @@ table tbody td svg {
     margin-top: 2rem;
 }
 
-.button-group input {
+.button-group button {
     background-color: var(--red);
     padding: 0.5rem;
     width: 18rem;
@@ -359,7 +366,7 @@ table tbody td svg {
     cursor: pointer;
 }
 
-.button-group.edit input {
+.button-group.edit button {
     background-color: var(--blue);
 }
 
