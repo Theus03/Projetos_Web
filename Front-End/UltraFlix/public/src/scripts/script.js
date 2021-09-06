@@ -147,7 +147,7 @@ const createRowFlix = (flix, index) => {
         const flix = readFlix()[index]
         flix.index = index
         fillFields(flix)
-    location.href = '../pages/edit.html'
+        location.href = '../pages/edit.html'
 }
 
 function isDeleteFlix(index){
