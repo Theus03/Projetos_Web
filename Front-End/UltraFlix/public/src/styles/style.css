@@ -61,6 +61,11 @@ a {
     visibility: hidden;
 }
 
+label {
+    color: var(--white);
+    margin-bottom: 0.5rem;
+}
+
 
 /*======== NAVBAR ===========*/
 aside {
@@ -166,6 +171,10 @@ li{
     font-size: 2rem;
     font-weight: 500;
     text-transform: uppercase;
+    display: inline-block;
+}
+.text-title.edit {
+    display: none;
 }
 
 .text-title::before{
@@ -225,6 +234,11 @@ table tbody td svg {
 
 .icon-delete:hover {
     stroke: #E73434;
+}
+
+.result-edit {
+    display: none;
+    flex-direction:column;
 }
 
 /*======== MODAL ===========*/
