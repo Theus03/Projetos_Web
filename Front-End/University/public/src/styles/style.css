@@ -1,0 +1,91 @@
+/* ========= GLOBAL ========= */
+
+:root {
+    --black: #333;
+    --red: #E03E3E;
+    --gold: #E09F3E;
+    --white: #fff;
+    --blue: #3E7FE0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-image: url(../img/back-login.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 100vh;
+}
+
+
+/* ========= LOGIN ========= */
+.container-main {
+    background: #3333331e;
+    position: fixed;
+    width: 40%;
+    right: 0;
+    bottom: 0;
+    top: 0;
+}
+
+.container-login {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-login {
+    font-size: 3rem;
+    font-weight: 400;
+    color: var(--black);
+    text-transform: uppercase;
+}
+
+.input-group {
+    margin-top: 8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-email {
+    position: absolute;
+    margin-right: 20rem;
+    width: 2rem;
+}
+
+.input-group input {
+    background: none;
+    width: 25rem;
+    padding: 1rem;
+    border-radius: 10px;
+    outline: none;
+    padding-left: 18%;
+    border: solid 2px var(--red);
+    color: var(--black);
+    font-weight: 700;
+}
+
+.input-group input::placeholder {
+    color: var(--red);
+}
+
+.button-login {
+    background: var(--gold);
+    margin-top: 8rem;
+    padding: 1.3rem;
+    width: 25rem;
+    color: var(--white);
+    border-radius: 10px;
+    border: none;
+    font-size: 1.4rem;
+    cursor: pointer;
+}
