@@ -12,8 +12,14 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
 }
+
+html {
+    font-size: 93.75%; /* Equivale a 15px */
+    overflow: auto;
+    scroll-behavior: smooth;
+}
+
 
 body {
     background-image: url(../img/back-login.jpeg);
@@ -21,10 +27,12 @@ body {
     background-size: cover;
     background-position: center center;
     height: 100vh;
+    font-family: "Poppins", sans-serif;
 }
 
 
 /* ========= LOGIN ========= */
+
 .container-main {
     background: #3333331e;
     position: fixed;
@@ -35,6 +43,7 @@ body {
 }
 
 .container-login {
+    overflow: auto;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -89,3 +98,88 @@ body {
     font-size: 1.4rem;
     cursor: pointer;
 }
+
+/* ========= RESPONSIVE ========= */
+
+@media (max-width: 800px) {
+
+    /* ========= LOGIN ========= */
+    
+    .container-main {
+        background: #ffffff62;
+        width: 100%;
+    }
+
+    .text-login {
+        font-size: 2.5rem;
+    }
+    
+    .input-group {
+        margin-top: 1rem;
+    }
+    
+    .icon-email {
+        margin-right: 12rem;
+        width: 1.5rem;
+    }
+    .input-group input {
+        width: 15rem;
+        padding: 0.5rem;
+        padding-left: 18%;
+    }
+    .button-login {
+        background: var(--gold);
+        margin-top: 3rem;
+        margin-bottom: 15rem;
+        padding: 0.8rem;
+        width: 15rem;
+        color: var(--white);
+        border-radius: 10px;
+        border: none;
+        font-size: 1.4rem;
+        cursor: pointer;
+    }
+}
+
+
+@media (width: 1024px) {
+
+    /* ========= LOGIN ========= */
+    
+    .container-main {
+        background: #ffffff62;
+        width: 100%;
+    }
+
+    .text-login {
+        font-size: 2.5rem;
+    }
+    
+    .input-group {
+        margin-top: 5rem;
+    }
+    
+    .icon-email {
+        margin-right: 12rem;
+        width: 1.5rem;
+    }
+    .input-group input {
+        width: 15rem;
+        padding: 0.5rem;
+        padding-left: 18%;
+    }
+    .button-login {
+        background: var(--gold);
+        margin-top: 5rem;
+        margin-bottom: 55rem;
+        padding: 0.8rem;
+        width: 15rem;
+        color: var(--white);
+        border-radius: 10px;
+        border: none;
+        font-size: 1.4rem;
+        cursor: pointer;
+    }
+}
+
+
