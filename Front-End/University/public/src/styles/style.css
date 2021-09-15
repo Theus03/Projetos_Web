@@ -159,7 +159,7 @@ main {
 }
 
 .action-buttons {
-    margin-top: 5REM;
+    margin-top: 5rem;
     overflow: auto;
     display: flex;
     text-align: center;
@@ -201,6 +201,19 @@ main {
 /* ========= RESPONSIVE ========= */
 
 @media (max-width: 800px) {
+    /* ========= GLOBAL ========= */
+        
+    header {
+        padding: 1rem;
+    }
+
+    .img-logo {
+        font-size: 3.5rem;
+    }
+
+    .text-logo {
+        font-size: 1.8rem;
+    }
 
     /* ========= LOGIN ========= */
     
@@ -238,10 +251,43 @@ main {
         font-size: 1.4rem;
         cursor: pointer;
     }
+
+    /* ========= HOME ========= */
+
+    .action-buttons {
+        margin-top: -8.5rem;
+    }
+
+    .buttons {
+        padding: 1rem;
+        width: 15rem;
+        font-size: 1rem;
+    }
 }
 
 
+@media (width: 768px) {
+    /* ========= HOME ========= */
+   main {
+       padding-bottom: 25rem;
+   }
+}
+
 @media (width: 1024px) {
+    /* ========= GLOBAL ========= */
+        
+    header {
+        padding: 1rem;
+    }
+
+    .img-logo {
+        font-size: 3.5rem;
+    }
+
+    .text-logo {
+        font-size: 1.8rem;
+    }
+
 
     /* ========= LOGIN ========= */
     
@@ -278,6 +324,16 @@ main {
         border: none;
         font-size: 1.4rem;
         cursor: pointer;
+    }
+     /* ========= HOME ========= */
+
+     main {
+        padding-bottom: 50rem;
+    }
+    .buttons {
+        padding: 1rem;
+        width: 15rem;
+        font-size: 1rem;
     }
 }
 
