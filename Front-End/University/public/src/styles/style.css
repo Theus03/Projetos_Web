@@ -213,6 +213,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: auto;
 }
 
 .container-form form {
@@ -374,6 +375,49 @@ main {
         width: 15rem;
         font-size: 1rem;
     }
+
+    /* ========= REGISTER ========= */
+     
+    .container-form form {
+        padding-top: 12rem;
+        width: 90%;
+        height: 170vh;
+        overflow: auto;
+    }
+    .header-form {
+        padding-top: 8.5rem;
+        width: 90%;
+        height: 5%;
+    }
+
+    .header-form a{
+        font-size: 0.8rem;
+    }
+
+    .title-form {
+        font-size: 1.3rem;
+    }
+        
+    .group-input {
+        flex-direction: column;
+    }
+    
+    .group-input input {  
+        width: 15rem;
+        font-size: 0.8rem;
+        margin-top: 0.5rem;
+    }
+    
+    .group-buttons {
+        margin-top: 0.8rem;
+    }
+        
+    .group-buttons button {
+        width: 12rem;
+        font-size: 1rem;
+    }
+        
+
 }
 
 
@@ -382,6 +426,18 @@ main {
    main {
        padding-bottom: 25rem;
    }
+   
+    /* ========= REGISTER ========= */
+     
+    .container-form form {
+        padding-top: 30rem;
+        height: 200vh;
+        overflow: auto;
+    }
+    
+    .group-input {
+        flex-direction: row;
+    }
 }
 
 @media (width: 1024px) {
@@ -446,6 +502,29 @@ main {
         width: 15rem;
         font-size: 1rem;
     }
+    /* ========= REGISTER ========= */
+        
+    .header-form {
+        height: 5%;
+    }
+    .header-form a{
+        font-size: 1rem;
+    }
+
+    .title-form {
+        font-size: 1.5rem;
+    }
+    .group-input input {  
+        width: 20rem;
+    }
+    .group-buttons {
+        margin-top: 0.1rem;
+    }
+
+    .group-buttons button{
+        padding: 1rem;
+    }
+    
 }
 
 
