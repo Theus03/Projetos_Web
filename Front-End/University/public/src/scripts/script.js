@@ -52,11 +52,89 @@ const setLocalStorage = () => localStorage.setItem("db_university", JSON.stringi
 
 // CRUD
 
+const readUniversity = () => getLocalStorage()
+
+const createUniversity = (university) => {
+        const dbUniversity = getLocalStorage();
+        dbUniversity.push(university);
+        setLocalStorage(dbUniversity);
+}
+
 // VALIDATION
+
+const isValidFields = () => { 
+    return document.getElementById('form').reportValidity();
+}
 
 // INTERACTION WITH LAYOUT
 
+const clearFields = () => {
+    const fields = document.querySelectorAll('.form-field')
+    fields.forEach(field => field.value = "")
+    document.getElementById('name').dataset.index = 'new'
+}
+
+const saveUniversity = () => {
+    try{
+        if(isValidFields()) {
+            const university = {
+                name: document.getElementById('name').value,
+                course: document.getElementById('course').value,
+                price: document.getElementById('price').value,
+                type: document.getElementById('type').value,
+                nomenclature: document.getElementById('nomenclature').value,
+                duration: document.getElementById('duration').value,
+                local: document.getElementById('local').value,
+                degree: document.getElementById('degree').value,
+            }
+            const index = document.getElementById('name').dataset.index
+            if(index == "new") {
+                createUniversity(university)
+                updateTableUniversity()
+            } else {
+                updateUniversity(index, university)
+                updateTableUniversity()
+            }
+        }
+    } catch (error) {
+        alert(error.message)
+    }
+}
+
+
 // DOM 
+
+const createRowUniversity = (university, index) => {
+    const newRow = document.createElement('tr');
+
+    newRow.innerHTML = `
+        <td>${university.name}</td>
+        <td>${university.course}</td>
+        <td>${university.price}</td>
+        <td>${university.type}</td>
+        <td>${university.nomenclature}</td>
+        <td>${university.duration}</td>
+        <td>${university.local}</td>
+        <td>${university.degree}</td>
+        <td>
+            <img src="../icons/edit.png" alt="" id="edit-${index}">
+            <img src="../icons/delete.png" id="delete-${index}" alt="" style="width:2.8rem;" onclick="Modal.openModal()">
+        </td>
+    `
+
+    document.querySelector('#data-table>tbody tr').appendChild(newRow)
+}
+
+const clearTable = () => {
+    const rows = document.querySelectorAll('#data-table>tbody tr');
+    rows.forEach(row => row.parentNode.removeChild(row))
+}
+
+const updateTableUniversity = () => {
+    const dbUniversity = readUniversity()
+    clearTable();
+    dbUniversity.forEach(createRowUniversity)
+}
 
 // FORM 
 
