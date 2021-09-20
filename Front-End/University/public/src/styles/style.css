@@ -316,6 +316,7 @@ main {
 
 /* ========= MY LIST ========= */
 #container-table {
+    overflow: auto;
     background-color: #3333339a;
     height: 100%;
     bottom: 0;
@@ -347,7 +348,6 @@ table tbody td{
 }
 
 table tbody td img {
-    bottom: 1rem;
     width: 2.1rem;
     cursor: pointer;
 }
@@ -459,7 +459,6 @@ table tbody td img {
         width: 12rem;
         font-size: 1rem;
     }
-        
 
 }
 
