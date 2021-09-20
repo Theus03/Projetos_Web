@@ -365,6 +365,14 @@ table tbody td img {
     align-items: center;
     overflow: auto;
     z-index: 1;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.4s;
+}
+
+.modal-overlay.active {
+    opacity: 100;
+    visibility: visible;
 }
 
 .modal {
@@ -409,6 +417,7 @@ table tbody td img {
     font-weight: 700;
     font-size: 1rem;
     cursor: pointer;
+    transition: 0.4s;
 }
 
 .modal-button.cancel {
@@ -422,7 +431,10 @@ table tbody td img {
     background-color: var(--red);
     text-transform: uppercase;
 }
-
+.modal-button:hover{
+    opacity: 95%;
+    padding-left: 2rem;
+}
 /* ========= RESPONSIVE ========= */
 
 @media (max-width: 800px) {

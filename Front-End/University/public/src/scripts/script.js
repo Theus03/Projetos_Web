@@ -28,3 +28,16 @@ let time = 4000,
     }
 
 window.addEventListener("load", startImage)
+
+
+/* ======== MY LIST ========*/
+
+const Modal = {
+    openModal() {
+        document.querySelector(".modal-overlay").classList.add("active");
+    }, 
+    
+    closeModal() {
+        document.querySelector(".modal-overlay").classList.remove("active");
+    }
+}
