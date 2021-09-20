@@ -32,6 +32,8 @@ window.addEventListener("load", startImage)
 
 /* ======== MY LIST ========*/
 
+// MODAL
+
 const Modal = {
     openModal() {
         document.querySelector(".modal-overlay").classList.add("active");
@@ -41,3 +43,23 @@ const Modal = {
         document.querySelector(".modal-overlay").classList.remove("active");
     }
 }
+
+// LOCAL STORAGE 
+
+const getLocalStorage = () => JSON.parse(localStorage.getItem("db_university")) ?? [];
+
+const setLocalStorage = () => localStorage.setItem("db_university", JSON.stringify(dbUniversity))
+
+// CRUD
+
+// VALIDATION
+
+// INTERACTION WITH LAYOUT
+
+// DOM 
+
+// FORM 
+
+// EVENTS
+
+
