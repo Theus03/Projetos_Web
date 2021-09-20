@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../styles/style.css">
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 </head>
 <body class="back-list">
     <header>
@@ -46,36 +47,18 @@
                         <img src="../icons/delete.png" alt="" style="width:2.8rem;">
                     </td>
                 </tr>
-                <tr>
-                    <td>UNIP</td>
-                    <td>Ciência da Computação</td>
-                    <td>400,00</td>
-                    <td>Graduação</td>
-                    <td>Bacharelado</td>
-                    <td>4 anos</td>
-                    <td>São Paulo</td>
-                    <td>10</td>
-                    <td>
-                        <img src="../icons/edit.png" alt="">
-                        <img src="../icons/delete.png" alt="" style="width:2.8rem">
-                    </td>
-                </tr>
-                <tr>
-                    <td>UNIP</td>
-                    <td>Ciência da Computação</td>
-                    <td>400,00</td>
-                    <td>Graduação</td>
-                    <td>Bacharelado</td>
-                    <td>4 anos</td>
-                    <td>São Paulo</td>
-                    <td>10</td>
-                    <td>
-                        <img src="../icons/edit.png" alt="">
-                        <img src="../icons/delete.png" alt="" style="width:2.8rem">
-                    </td>
-                </tr>
             </tbody>
         </table>
     </main>
+    <div class="modal-overlay">
+        <div class="modal">
+            <h2 class="title-modal">Você deseja realmente excluir?</h2>
+            <lottie-player src="../icons/confirm_delete.json" class="animation"  speed="1" autoplay></lottie-player>
+            <div class="group-buttons-modal">
+                <button class="modal-button cancel">Cancelar</button>
+                <button class="modal-button remove">Remover</button>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
