@@ -32,6 +32,10 @@ body {
     background-image: url(../img/back-login.jpeg);
 }
 
+.back-list {
+    background-image: url(../img/img-back-list.jpg);
+}
+
 header {
     position: absolute;
     z-index: 1;
@@ -309,6 +313,45 @@ main {
     opacity: 95%;
     padding-left: 2rem;
 }
+
+/* ========= MY LIST ========= */
+#container-table {
+    background-color: #3333339a;
+    height: 100%;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+#data-table {
+    width: 100%;
+    text-align: center;
+    overflow: auto;
+    border-spacing: 0rem  0rem;
+}
+
+table thead th{
+    background-color: var(--gold);
+    padding: 1.5rem;
+    color: var(--white);
+    text-align: center;
+    font-weight: 400;
+}
+
+table tbody td{
+    padding: 1rem 1rem;
+    font-size: 1rem;
+    color: var(--white);
+    font-weight: 400;
+    text-align: center;
+}
+
+table tbody td img {
+    bottom: 1rem;
+    width: 2.1rem;
+    cursor: pointer;
+}
+
 
 /* ========= RESPONSIVE ========= */
 
