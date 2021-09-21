@@ -58,6 +58,11 @@ header {
     font-weight: 900;
 }
 
+.result-overlay {
+    display: none;
+    visibility: hidden;
+    clip: rect(0, 0, 0, 0);
+}
 
 /* ========= LOGIN ========= */
 
@@ -329,6 +334,13 @@ main {
     text-align: center;
     overflow: auto;
     border-spacing: 0rem  0rem;
+}
+
+.link_add{
+    display: flex;
+    color: #fff;
+    margin-left:3rem;
+    margin-bottom:1rem;
 }
 
 table thead th{

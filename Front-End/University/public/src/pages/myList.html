@@ -19,6 +19,7 @@
     </header>
     <main id="container-table">
         <table id="data-table">
+            <a href="../pages/register.html" class="link_add"> + Adicionar University</a>
             <thead>
                 <tr>
                     <th>Nome</th>
@@ -33,20 +34,6 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>UNIP</td>
-                    <td>Ciência da Computação</td>
-                    <td>400,00</td>
-                    <td>Graduação</td>
-                    <td>Bacharelado</td>
-                    <td>4 anos</td>
-                    <td>São Paulo</td>
-                    <td>10</td>
-                    <td>
-                        <img src="../icons/edit.png" alt="">
-                        <img src="../icons/delete.png" alt="" style="width:2.8rem;" onclick="Modal.openModal()">
-                    </td>
-                </tr>
             </tbody>
         </table>
     </main>
@@ -60,6 +47,33 @@
             </div>
         </div>
     </div>
+    <div class="result-overlay">
+        <form action="" id="form">
+            <div class="header-form">
+                <a href="../home/home.html">HOME</a>
+                <h2 class="title-form">Cadastrar</h2>
+                <a href="../pages/myList.html">MINHA LISTA</a>
+            </div>
+            <div class="group-input">
+                <div class="group-one">
+                    <input data-index="new" type="text" name="name" id="name" class="form-field" placeholder="Nome da faculdade ou universidade">
+                    <input type="text" name="course" id="course" class="form-field" placeholder="Curso desejado">
+                    <input type="text" name="price" id="price" class="form-field" placeholder="Preço">
+                    <input type="text" name="type" id="type" class="form-field" placeholder="Tipo (Graduação, pós-graduação ou etc)">
+                </div>
+                <div class="group-two">
+                    <input type="text" name="nomenclature" id="nomenclature" class="form-field" placeholder="Nomenclatura (Bacharelado, tecnólogo  e etc)">
+                    <input type="text" name="duration" id="duration" class="form-field" placeholder="Duração">
+                    <input type="text" name="local" id="local" class="form-field" placeholder="Localidade">
+                    <input type="number" name="degree" id="degree" class="form-field" max="10" min="1" placeholder="Grau de interesse (1 a 10)">
+                </div>
+            </div>
+            <div class="group-buttons">
+                <button type="submit">Cadastrar</button>
+            </div>
+        </form>
+    </div>
+    
 <script src="../scripts/script.js"></script>
 </body>
 </html>

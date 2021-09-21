@@ -14,7 +14,7 @@
 <body>
     <div class="back-box"></div>
         <div class="container-form">
-            <form action="">
+            <form action="" id="form">
                 <div class="header-form">
                     <a href="../home/home.html">HOME</a>
                     <h2 class="title-form">Cadastrar</h2>
@@ -22,7 +22,7 @@
                 </div>
                 <div class="group-input">
                     <div class="group-one">
-                        <input type="text" name="name" id="name" class="form-field" placeholder="Nome da faculdade ou universidade">
+                        <input data-index="new" type="text" name="name" id="name" class="form-field" placeholder="Nome da faculdade ou universidade">
                         <input type="text" name="course" id="course" class="form-field" placeholder="Curso desejado">
                         <input type="text" name="price" id="price" class="form-field" placeholder="Preço">
                         <input type="text" name="type" id="type" class="form-field" placeholder="Tipo (Graduação, pós-graduação ou etc)">
@@ -35,9 +35,28 @@
                     </div>
                 </div>
                 <div class="group-buttons">
-                    <button type="submit">Cadastrar</button>
+                    <button type="submit" id="addUniversity">Cadastrar</button>
                 </div>
             </form>
+        </div>
+        <div class="result-overlay">
+            <table id="data-table">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Curso</th>
+                        <th>Preço</th>
+                        <th>Tipo</th>
+                        <th>Nomenclatura</th>
+                        <th>Duração</th>
+                        <th>Local</th>
+                        <th>Interesse</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
         </div>
 <script src="../scripts/script.js"></script>
 </body>

@@ -48,9 +48,22 @@ const Modal = {
 
 const getLocalStorage = () => JSON.parse(localStorage.getItem("db_university")) ?? [];
 
-const setLocalStorage = () => localStorage.setItem("db_university", JSON.stringify(dbUniversity))
+const setLocalStorage = (dbUniversity) => localStorage.setItem("db_university", JSON.stringify(dbUniversity))
 
 // CRUD
+
+const deleteUniversity = (index) => {
+    const dbUniversity = readUniversity()
+
+    dbUniversity.splice(index, 1)
+    setLocalStorage(dbUniversity)
+}
+
+const updateUniversity = (index, university) => {
+    const dbUniversity = readUniversity();
+    dbUniversity[index] = university;
+    setLocalStorage(dbUniversity);
+}
 
 const readUniversity = () => getLocalStorage()
 
@@ -63,7 +76,7 @@ const createUniversity = (university) => {
 // VALIDATION
 
 const isValidFields = () => { 
-    return document.getElementById('form').reportValidity();
+    return document.getElementById('form').reportValidity()
 }
 
 // INTERACTION WITH LAYOUT
@@ -77,6 +90,7 @@ const clearFields = () => {
 const saveUniversity = () => {
     try{
         if(isValidFields()) {
+            alert('vcalidou')
             const university = {
                 name: document.getElementById('name').value,
                 course: document.getElementById('course').value,
@@ -138,6 +152,49 @@ const updateTableUniversity = () => {
 
 // FORM 
 
+const fillFields = (university) => {
+    document.getElementById('name').value = university.name
+    document.getElementById('course').value = university.course
+    document.getElementById('price').value = university.price
+    document.getElementById('type').value = university.type
+    document.getElementById('nomenclature').value = university.nomenclature
+    document.getElementById('duration').value = university.duration
+    document.getElementById('local').value = university.local
+    document.getElementById('degree').value = university.degree
+    document.getElementById('name').dataset.index = university.index
+}
+
+const editUniversity = (index) => {
+    const university = readUniversity()[index]
+    university.index = index
+    fillFields(university)
+}
+
+const editDelete = (event) => {
+    if(event.target.tagName == 'img') {
+        const[action, index] = event.target.id.split('-')
+
+        if(action == 'edit') {
+            // O QUE VAI MUDAR DA PÁGINA REGISTRAR PARA A DE EDITAR
+            editUniversity(index)
+        } else {
+            const university = readUniversity()[index]
+            Modal.openModal()
+            document.getElementById('confirmDelete').addEventListener('click', () => {
+                deleteUniversity(index)
+                Modal.closeModal()
+                updateTableUniversity()
+            })
+        }
+    }
+}
+
+updateTableUniversity()
+
 // EVENTS
 
+document.getElementById('addUniversity')
+    .addEventListener('click', saveUniversity)
 
+document.querySelectorAll('#data-table>tbody')
+    .addEventListener('click', editDelete)
