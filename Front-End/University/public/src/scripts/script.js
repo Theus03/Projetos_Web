@@ -60,17 +60,17 @@ const deleteUniversity = (index) => {
 }
 
 const updateUniversity = (index, university) => {
-    const dbUniversity = readUniversity();
-    dbUniversity[index] = university;
-    setLocalStorage(dbUniversity);
+    const dbUniversity = readUniversity()
+    dbUniversity[index] = university
+    setLocalStorage(dbUniversity)
 }
 
 const readUniversity = () => getLocalStorage()
 
 const createUniversity = (university) => {
-        const dbUniversity = getLocalStorage();
-        dbUniversity.push(university);
-        setLocalStorage(dbUniversity);
+    const dbUniversity = getLocalStorage()
+    dbUniversity.push(university)
+    setLocalStorage(dbUniversity)
 }
 
 // VALIDATION
@@ -88,9 +88,9 @@ const clearFields = () => {
 }
 
 const saveUniversity = () => {
+    alert('validou')
     try{
         if(isValidFields()) {
-            alert('vcalidou')
             const university = {
                 name: document.getElementById('name').value,
                 course: document.getElementById('course').value,
@@ -99,7 +99,7 @@ const saveUniversity = () => {
                 nomenclature: document.getElementById('nomenclature').value,
                 duration: document.getElementById('duration').value,
                 local: document.getElementById('local').value,
-                degree: document.getElementById('degree').value,
+                degree: document.getElementById('degree').value
             }
             const index = document.getElementById('name').dataset.index
             if(index == "new") {
@@ -119,7 +119,7 @@ const saveUniversity = () => {
 // DOM 
 
 const createRowUniversity = (university, index) => {
-    const newRow = document.createElement('tr');
+    const newRow = document.createElement('tr')
 
     newRow.innerHTML = `
         <td>${university.name}</td>
@@ -136,7 +136,7 @@ const createRowUniversity = (university, index) => {
         </td>
     `
 
-    document.querySelector('#data-table>tbody tr').appendChild(newRow)
+    document.querySelectorAll('#data-table>tbody').appendChild(newRow)
 }
 
 const clearTable = () => {
@@ -146,7 +146,7 @@ const clearTable = () => {
 
 const updateTableUniversity = () => {
     const dbUniversity = readUniversity()
-    clearTable();
+    clearTable()
     dbUniversity.forEach(createRowUniversity)
 }
 
