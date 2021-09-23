@@ -13,13 +13,13 @@
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 </head>
 <body class="back-list">
-    <header>
+    <header class="header-my-list">
         <h1 class="img-logo">🎓</h1>
         <h1 class="text-logo">UNIVERSITY</h1>
     </header>
     <main id="container-table">
+        <a href="../pages/register.html" class="link_add"> + Adicionar University</a>
         <table id="data-table">
-            <a href="../pages/register.html" class="link_add"> + Adicionar University</a>
             <thead>
                 <tr>
                     <th>Nome</th>
@@ -43,7 +43,7 @@
             <lottie-player src="../icons/confirm_delete.json" class="animation"  speed="1" autoplay LOOP></lottie-player>
             <div class="group-buttons-modal">
                 <button class="modal-button cancel" onclick="Modal.closeModal()">Cancelar</button>
-                <button class="modal-button remove">Remover</button>
+                <button id="confirmDelete" class="modal-button remove">Remover</button>
             </div>
         </div>
     </div>

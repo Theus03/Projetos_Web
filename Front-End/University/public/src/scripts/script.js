@@ -88,7 +88,6 @@ const clearFields = () => {
 }
 
 const saveUniversity = () => {
-    alert('validou')
     try{
         if(isValidFields()) {
             const university = {
@@ -116,6 +115,8 @@ const saveUniversity = () => {
 }
 
 
+
+
 // DOM 
 
 const createRowUniversity = (university, index) => {
@@ -136,7 +137,7 @@ const createRowUniversity = (university, index) => {
         </td>
     `
 
-    document.querySelectorAll('#data-table>tbody').appendChild(newRow)
+    document.querySelector('#data-table>tbody').appendChild(newRow)
 }
 
 const clearTable = () => {
