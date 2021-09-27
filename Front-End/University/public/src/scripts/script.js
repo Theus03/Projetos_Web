@@ -181,13 +181,15 @@ const editDelete = (event) => {
         } else {
             const university = readUniversity()[index]
             Modal.openModal()
-            document.getElementById('confirmDelete').addEventListener('click', () => {
-                deleteUniversity(index)
-                Modal.closeModal()
-                updateTableUniversity()
-            })
+            isDelete()
         }
     }
+}
+
+function isDelete(index) {
+    deleteUniversity(index)
+    Modal.closeModal()
+    updateTableUniversity()
 }
 
 updateTableUniversity()
