@@ -103,6 +103,7 @@ const saveUniversity = () => {
             const index = document.getElementById('name').dataset.index
             if(index == 'new') {
                 createUniversity(university)
+                alert('Inserido com sucesso! ✅')
                 updateTableUniversity()
             } else {
                 updateUniversity(index, university)
