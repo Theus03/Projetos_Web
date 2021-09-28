@@ -132,8 +132,8 @@ const createRowUniversity = (university, index) => {
         <td>${university.local}</td>
         <td>${university.degree}</td>
         <td>
-            <img id="edit-${index}" src="../icons/edit.png"  alt="" onclick="isEdit()">
-            <img id="delete-${index}" src="../icons/delete.png"  alt="" style="width:2.8rem;" onclick="Modal.openModal()">
+            <img id="edit-${index}" src="../icons/edit.png"  alt="">
+            <img id="delete-${index}" src="../icons/delete.png"  alt="" style="width:2.8rem;">
         </td>
     `
 
@@ -172,37 +172,31 @@ const editUniversity = (index) => {
 }
 
 const editDelete = (event) => {
-    if(event.target.tagName == 'img') {
+    if(event.target.src != ''){
         const [action, index] = event.target.id.split('-')
 
         if (action == 'edit') {
-            isEdit()
+            document.querySelector('.result-overlay').style.visibility = 'visible'
+            document.querySelector('.result-overlay').style.display = 'flex'
+            document.querySelector('.header-my-list').style.display = 'none'
+            document.querySelector('.container-form').style.display = 'flex'
+            document.querySelector('.back-box').style.display = 'flex'
+            document.querySelector('.back-box').style.background = 'var(--blue)'
+            document.querySelector('.back-list').style.background = '#fff'
+            document.querySelector('#container-table').style.display = 'none'
+            document.querySelector('#addUniversity').style.background = 'var(--blue)'
             editUniversity(index)
         } else {
             const university = readUniversity()[index]
             Modal.openModal()
-            isDelete()
+            document.querySelector('#confirmDelete').addEventListener('click', () => {
+                deleteUniversity(index)
+                Modal.closeModal()
+                updateTableUniversity()
+
+            })
         }
     }
-}
-
-function isEdit(index) {
-    document.querySelector('.result-overlay').style.visibility = 'visible'
-    document.querySelector('.result-overlay').style.display = 'flex'
-    document.querySelector('.header-my-list').style.display = 'none'
-    document.querySelector('.container-form').style.display = 'flex'
-    document.querySelector('.back-box').style.display = 'flex'
-    document.querySelector('.back-box').style.background = 'var(--blue)'
-    document.querySelector('.back-list').style.background = '#fff'
-    document.querySelector('#container-table').style.display = 'none'
-    document.querySelector('#addUniversity').style.background = 'var(--blue)'
-    editUniversity(index)
-}
-
-function isDelete(index) {
-    deleteUniversity(index)
-    Modal.closeModal()
-    updateTableUniversity()
 }
 
 updateTableUniversity()
