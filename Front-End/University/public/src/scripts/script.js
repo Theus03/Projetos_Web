@@ -132,7 +132,7 @@ const createRowUniversity = (university, index) => {
         <td>${university.local}</td>
         <td>${university.degree}</td>
         <td>
-            <img src="../icons/edit.png" alt="" id="edit-${index}">
+            <img src="../icons/edit.png" id="edit-${index}" alt="" onclick="edit()">
             <img src="../icons/delete.png" id="delete-${index}" alt="" style="width:2.8rem;" onclick="Modal.openModal()">
         </td>
     `
@@ -177,6 +177,7 @@ const editDelete = (event) => {
 
         if(action == 'edit') {
             // O QUE VAI MUDAR DA PÁGINA REGISTRAR PARA A DE EDITAR
+            edit()
             editUniversity(index)
         } else {
             const university = readUniversity()[index]
@@ -184,6 +185,21 @@ const editDelete = (event) => {
             isDelete()
         }
     }
+}
+
+function edit(index) {
+    document.querySelector('.result-overlay').style.visibility = 'visible'
+    document.querySelector('.result-overlay').style.display = 'flex'
+    document.querySelector('.header-my-list').style.display = 'none'
+    document.querySelector('.container-form').style.display = 'flex'
+    document.querySelector('.back-box').style.display = 'flex'
+    document.querySelector('.back-box').style.background = 'var(--blue)'
+    document.querySelector('.back-list').style.background = '#fff'
+    document.querySelector('#container-table').style.display = 'none'
+    document.querySelector('#data-table').style.display = 'none'
+    document.querySelector('#addUniversity').style.background = 'var(--blue)'
+    editUniversity(index)
+    
 }
 
 function isDelete(index) {
