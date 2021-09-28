@@ -101,7 +101,7 @@ const saveUniversity = () => {
                 degree: document.getElementById('degree').value
             }
             const index = document.getElementById('name').dataset.index
-            if(index == "new") {
+            if(index == 'new') {
                 createUniversity(university)
                 updateTableUniversity()
             } else {
@@ -132,8 +132,8 @@ const createRowUniversity = (university, index) => {
         <td>${university.local}</td>
         <td>${university.degree}</td>
         <td>
-            <img src="../icons/edit.png" id="edit-${index}" alt="" onclick="edit()">
-            <img src="../icons/delete.png" id="delete-${index}" alt="" style="width:2.8rem;" onclick="Modal.openModal()">
+            <img id="edit-${index}" src="../icons/edit.png"  alt="" onclick="isEdit()">
+            <img id="delete-${index}" src="../icons/delete.png"  alt="" style="width:2.8rem;" onclick="Modal.openModal()">
         </td>
     `
 
@@ -173,11 +173,10 @@ const editUniversity = (index) => {
 
 const editDelete = (event) => {
     if(event.target.tagName == 'img') {
-        const[action, index] = event.target.id.split('-')
+        const [action, index] = event.target.id.split('-')
 
-        if(action == 'edit') {
-            // O QUE VAI MUDAR DA PÁGINA REGISTRAR PARA A DE EDITAR
-            edit()
+        if (action == 'edit') {
+            isEdit()
             editUniversity(index)
         } else {
             const university = readUniversity()[index]
@@ -187,7 +186,7 @@ const editDelete = (event) => {
     }
 }
 
-function edit(index) {
+function isEdit(index) {
     document.querySelector('.result-overlay').style.visibility = 'visible'
     document.querySelector('.result-overlay').style.display = 'flex'
     document.querySelector('.header-my-list').style.display = 'none'
@@ -196,10 +195,8 @@ function edit(index) {
     document.querySelector('.back-box').style.background = 'var(--blue)'
     document.querySelector('.back-list').style.background = '#fff'
     document.querySelector('#container-table').style.display = 'none'
-    document.querySelector('#data-table').style.display = 'none'
     document.querySelector('#addUniversity').style.background = 'var(--blue)'
     editUniversity(index)
-    
 }
 
 function isDelete(index) {
@@ -215,5 +212,5 @@ updateTableUniversity()
 document.getElementById('addUniversity')
     .addEventListener('click', saveUniversity)
 
-document.querySelectorAll('#data-table>tbody')
+document.querySelector('#data-table>tbody')
     .addEventListener('click', editDelete)

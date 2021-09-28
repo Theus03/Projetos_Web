@@ -37,6 +37,7 @@
             </tbody>
         </table>
     </main>
+    
     <div class="modal-overlay">
         <div class="modal">
             <h2 class="title-modal">Você deseja realmente excluir?</h2>
@@ -52,25 +53,25 @@
         <div class="result-overlay">
             <form id="form">
                 <div class="header-form">
-                    <a href="../home/home.html">HOME</a>
+                    <a href="../pages/myList.html">VOLTAR</a>
                     <h2 class="title-form">Editar</h2>
-                    <a href="../pages/myList.html">MINHA LISTA</a>
+                    <a href="../pages/register.html">CADASTRAR</a>
                 </div>
                 <div class="group-input">
                     <div class="group-one">
-                        <input data-index="new" type="text" name="name" id="name" class="form-field" placeholder="Nome da faculdade ou universidade">
-                        <input type="text" name="course" id="course" class="form-field" placeholder="Curso desejado">
-                        <input type="text" name="price" id="price" class="form-field" placeholder="Preço">
-                        <input type="text" name="type" id="type" class="form-field" placeholder="Tipo (Graduação, pós-graduação ou etc)">
+                        <input class="input-form" type="text" id="name" placeholder="Nome da faculdade ou universidade">
+                        <input class="input-form" type="text" id="course" placeholder="Curso desejado">
+                        <input class="input-form" type="text"  id="price"  placeholder="Preço">
+                        <input class="input-form" type="text"  id="type" placeholder="Tipo (Graduação, pós-graduação ou etc)">
                     </div>
                     <div class="group-two">
-                        <input type="text" name="nomenclature" id="nomenclature" class="form-field" placeholder="Nomenclatura (Bacharelado, tecnólogo  e etc)">
-                        <input type="text" name="duration" id="duration" class="form-field" placeholder="Duração">
-                        <input type="text" name="local" id="local" class="form-field" placeholder="Localidade">
-                        <input type="number" name="degree" id="degree" class="form-field" max="10" min="1" placeholder="Grau de interesse (1 a 10)">
+                        <input class="input-form" type="text" clature" id="nomenclature" placeholder="Nomenclatura (Bacharelado, tecnólogo  e etc)">
+                        <input class="input-form" type="text" id="duration" placeholder="Duração">
+                        <input class="input-form" type="text" id="local" placeholder="Localidade">
+                        <input class="input-form" type="number" id="degree" max="10" min="1" placeholder="Grau de interesse (1 a 10)">
                     </div>
                 </div>
-                <div class="group-buttons">
+                <div class="group-buttons edit">
                     <button id="addUniversity">Salvar</button>
                 </div>
             </form>
