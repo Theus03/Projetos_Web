@@ -154,6 +154,9 @@ const updateTableUniversity = () => {
 
 // FORM 
 
+const emptyTable = document.querySelectorAll('#data-table>tbody>tr td').value;
+
+
 const fillFields = (university) => {
     document.getElementById('name').value = university.name
     document.getElementById('course').value = university.course
@@ -163,7 +166,7 @@ const fillFields = (university) => {
     document.getElementById('duration').value = university.duration
     document.getElementById('local').value = university.local
     document.getElementById('degree').value = university.degree
-    document.getElementById('name').dataset.index = university.index
+    document.getElementById('name').dataset.index = university.index    
 }
 
 const editUniversity = (index) => {
