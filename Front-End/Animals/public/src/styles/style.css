@@ -1,0 +1,151 @@
+/*================ GLOBAL ================*/
+
+:root {
+    --green: #8B9D3C;
+    --white: #fff;
+    --black: #000;
+    --gray: #403A33;
+    --red: #DF525A;
+    --blue: #0491B0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 93.5%;
+}
+
+body {
+    background-color: var(--white);
+    overflow: auto;
+}
+
+#container-main {
+    width: min(90vw, 800px);
+    display: flex;
+}
+
+/*================ LOGIN ================*/
+
+.container-login {
+    display: flex;
+}
+
+.container-msg.user {
+    background: var(--green);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 35%;
+    height: 100vh;
+}
+
+.text.login-msg {
+    color: var(--white);
+    font: 500 3.8rem Ubuntu, 'sans-serif';
+    text-transform: uppercase;
+    margin-bottom: 5rem;
+}
+
+.logo {
+    color: var(--white);
+    font: 400 3rem Oswald, 'sans-serif';
+}
+
+.form-login {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-inline: auto;
+}
+
+.text.login-title {
+    color: var(--black);
+    font: 400 3rem Ubuntu, 'sans-serif';
+    margin-bottom: 3.5rem;
+}
+
+.input-email {
+    background: var(--white);
+    border: solid 3px var(--green);
+    width: 40%;
+    padding: 1rem;
+    outline: none;
+    font: 400 1rem Ubuntu, 'sans-serif';
+    margin-bottom: 3.5rem;
+}
+
+.input-email::placeholder {
+    font: 300 italic 1rem Ubuntu, 'sans-serif';
+}
+
+.button.login {
+    background: var(--green);
+    border: none;
+    padding: 1rem;
+    width: 25%;
+    font: 400 1.5rem Ubuntu, 'sans-serif';
+    color: var(--white);
+    cursor: pointer;
+    margin-bottom: 3.5rem;
+}
+
+.link-login {
+    font: 400 1rem Ubuntu, 'sans-serif';
+    color: var(--gray)
+}
+
+
+/*================ RESPONSIVE ================*/
+
+@media (max-width: 800px ) {
+
+    /*================ GLOBAL ================*/
+    html {
+        font-size: 85.75%;
+    }
+
+    /*================ LOGIN ================*/
+    .container-msg.user {
+        display: none;
+    }
+    .form-login{
+        width: 100%;
+        padding-top: 3rem;
+    }
+    .input-email {
+        width: 70%;
+    }
+    .button.login  {
+        width: 50%;
+    }
+}
+
+@media (width: 1024px) {
+    /*================ GLOBAL ================*/
+    html {
+        font-size: 85.75%;
+    }
+
+    /*================ LOGIN ================*/
+    .container-msg.user {
+        display: none;
+    }
+    .form-login{
+        width: 100%;
+        padding-top: 3rem;
+    }
+    .input-email {
+        width: 70%;
+    }
+    .button.login  {
+        width: 50%;
+    }
+}
