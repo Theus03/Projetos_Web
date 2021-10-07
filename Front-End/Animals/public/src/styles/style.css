@@ -29,6 +29,14 @@ body {
     display: flex;
 }
 
+header{
+    background: var(--green);
+}
+
+#loc {
+    text-decoration: underline;
+}
+
 /*================ LOGIN ================*/
 
 .container-login {
@@ -55,6 +63,7 @@ body {
 .logo {
     color: var(--white);
     font: 400 3rem Oswald, 'sans-serif';
+    text-decoration: none;
 }
 
 .form-login {
@@ -102,6 +111,78 @@ body {
     color: var(--gray)
 }
 
+/*================ HOME ================*/
+ul{
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 1rem;
+}
+
+.text-nav {
+    color: var(--white);
+    text-decoration: none;
+    font: 400 1.5rem Ubuntu, 'sans-serif';
+    transition: all 0.2s;
+}
+
+.text-nav:hover {
+    padding-bottom: 0.5rem;
+    text-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.container-home {
+    display: flex;
+    justify-content: center;
+    margin-inline: auto;
+    height: 86.5vh; 
+    background-color:red;
+}
+
+.box-black {
+    background-color: var(--black);
+    width: 45%;
+}
+
+.box-brown {
+    background-color: #403A33;
+    width: 75%;
+}
+
+.container-slogan {
+    margin-top: 12rem;
+    z-index: 1;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-inline: auto;
+}
+
+.text-slogan {
+    color: var(--white);
+    text-align: center;
+    font: 500 4.5rem Ubuntu, 'sans-serif';
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+}
+
+.button-home {
+    background: var(--green);
+    border: none;
+    padding: 1rem;
+    width: 40%;
+    font: 400 1.5rem Ubuntu, 'sans-serif';
+    color: var(--white);
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.button-home:hover {
+    padding-left: 2rem;
+}
 
 /*================ RESPONSIVE ================*/
 
@@ -125,6 +206,20 @@ body {
     }
     .button.login  {
         width: 50%;
+    }
+
+    /*================ HOME ================*/
+
+    .text-nav{
+        font-size: 1rem;
+    }
+    
+    .text-slogan {
+        font-size: 3rem;
+    }
+        
+    .container-slogan {
+        margin-top: 6rem;
     }
 }
 
