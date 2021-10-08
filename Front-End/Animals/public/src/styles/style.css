@@ -184,6 +184,96 @@ ul{
     padding-left: 2rem;
 }
 
+/*================ ANIMALS ================*/
+.slider-container {
+    position: relative;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+}
+
+.left-slide {
+    height: 100vh;
+    width: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform .5s ease-in-out;
+}
+
+.div {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.title-animal {
+    font: 400 3rem Ubuntu, 'sans-serif';
+    color: var(--white);
+    margin: 2rem 5rem;
+}
+
+.text-animal {
+    font: 400 1.3rem Ubuntu, 'sans-serif';
+    color: var(--white);
+    width: 80%;
+    text-align: left;
+    margin: 2rem 5rem;
+}
+
+.right-slide {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    transition: transform .5s ease-in-out;
+}
+
+.right-slide > div {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 100%;
+    width: 100%;
+}
+
+.down-button svg, .up-button svg {
+    width: 3rem;
+    border: none;
+}
+
+
+.slider-container .action-buttons .down-button {
+    transform: translateX(-100%);
+}
+
+.slider-container .action-buttons .up-button {
+    transform: translateY(-100%);
+}
+
+.action-buttons button {
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    z-index: 100;
+    background-color: var(--white);
+    border: none;
+    color: #403A33;
+    outline: none;
+}
+
+.down-button {
+    transform:  translateX(-100%);
+}
+
+.up-button {
+    transform:  translateY(-100%);
+}
+
+
+
 /*================ RESPONSIVE ================*/
 
 @media (max-width: 800px ) {
