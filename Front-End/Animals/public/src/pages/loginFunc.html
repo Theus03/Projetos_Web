@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="https://notion-emojis.s3-us-west-2.amazonaws.com/v0/svg-twitter/1f993.svg" type="image/x-icon">
-    <title>Login - Animals</title>
+    <title>Login Funcionário - Animals</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;0,500;0,700;1,300&display=swap" rel="stylesheet">
@@ -14,17 +14,18 @@
 </head>
 <body>
     <main class="container-login">
+        <form action="" class="form-login">
+            <h1 class="text login-title">LOGIN</h1>
+            <input type="text" class="input-email" required placeholder="Digite seu username...">
+            <button class="button login">Vamos Lá!</button>
+            <a href="./loginUser.html" class="link-login">ENTRAR COMO USUÁRIO</a>
+        </form>
         <div class="container-msg user">
-            <h2 class="text login-msg">Entre e <br> explore esses <br> animais <br> fantásticos.</h2>
+            <h2 class="text login-msg">Gerencie <br> nosso zoo <br> com a melhor <br> plataforma.</h2>
             <br>
             <h1 class="logo">ANIMALS</h1>
         </div>
-        <form action="" class="form-login">
-            <h1 class="text login-title">LOGIN</h1>
-            <input type="email" class="input-email" required placeholder="Digite seu e-mail...">
-            <button class="button login">Vamos Lá!</button>
-            <a href="./loginFunc.html" class="link-login">ENTRAR COMO FUNCIONÁRIO</a>
-        </form>
     </main>
+<script src="../scripts/login.js"></script>
 </body>
 </html>
