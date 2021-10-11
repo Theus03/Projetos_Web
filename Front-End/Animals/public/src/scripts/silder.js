@@ -10,7 +10,6 @@ const slidesLenght = slideLeft.querySelectorAll('div').length;
 
 let activeSlideIndex = 0;
 
-slideLeft.style.top = `-${(slidesLenght - 1) * 100}vh`;
 
 upButton.addEventListener('click', () => changeSlide('up'));
 downButton.addEventListener('click', () => changeSlide('down'));
@@ -25,7 +24,7 @@ const changeSlide = (direction) => {
     } else if(direction === 'down'){
         activeSlideIndex--;
         if(activeSlideIndex < 0) {
-            activeSlideIndex = slidesLenght - 1
+            activeSlideIndex = sliderLength - 1;
         }
     }
     slideRight.style.transform = `translateY(-${activeSlideIndex * sliderHeight}px)`;

@@ -206,12 +206,15 @@ ul{
     width: 100%;
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
+    justify-content:center;
+    padding-left: 5rem;
 }
 
 .title-animal {
     font: 400 3rem Ubuntu, 'sans-serif';
     color: var(--white);
-    margin: 2rem 5rem;
+    margin-bottom: 5rem;
 }
 
 .text-animal {
@@ -219,7 +222,6 @@ ul{
     color: var(--white);
     width: 80%;
     text-align: left;
-    margin: 2rem 5rem;
 }
 
 .right-slide {
@@ -234,7 +236,7 @@ ul{
 .right-slide > div {
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center center;
+    background-position: center;
     height: 100%;
     width: 100%;
 }
@@ -262,6 +264,7 @@ ul{
     border: none;
     color: #403A33;
     outline: none;
+    cursor: pointer;
 }
 
 .down-button {
@@ -311,6 +314,21 @@ ul{
     .container-slogan {
         margin-top: 6rem;
     }
+
+    /*================ ANIMALS ================*/
+    .div{
+        padding-left: 1rem;
+    }
+    .title-animal{
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+    }
+    .text-animal{
+        font-size: 0.6rem;
+        width: 70%;
+        margin-bottom: 15rem;
+    }
+
 }
 
 @media (width: 1024px) {
