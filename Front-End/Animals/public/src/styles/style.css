@@ -34,6 +34,7 @@ header{
 }
 
 #loc {
+    color: var(--white);
     text-decoration: underline;
 }
 
@@ -142,6 +143,10 @@ ul{
     transition: all 0.2s;
 }
 
+.text-nav.func {
+    color: #28281a;
+}
+
 .text-nav:hover {
     padding-bottom: 0.5rem;
     text-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
@@ -176,12 +181,36 @@ ul{
     margin-inline: auto;
 }
 
+.container-slogan.func {
+    background: #28281a;
+    margin-top: 0rem;
+    padding: 2rem;
+    width: 100%;
+    height: 40%;
+}
+
 .text-slogan {
     color: var(--white);
     text-align: center;
     font: 500 4.5rem Ubuntu, 'sans-serif';
     text-transform: uppercase;
     margin-bottom: 1.5rem;
+}
+
+.container-images {
+    background-color: red;
+    display: grid;
+    justify-content: stretch;
+    grid-template-columns: 5fr;
+}
+.row-one, .row-two {
+    background-color: blue;
+}
+
+.row-one img, .row-two img{
+
+    width: 12rem;
+    height: 12rem;
 }
 
 .button-home {
@@ -325,7 +354,15 @@ ul{
     .text-nav{
         font-size: 1rem;
     }
+
+    .logo {
+        font-size: 1.8rem;
+    }
     
+    .text-nav.func {
+        font-size: 0.8rem;
+    }
+
     .text-slogan {
         font-size: 3rem;
     }
