@@ -37,6 +37,7 @@ header{
     text-decoration: underline;
 }
 
+
 /*================ LOGIN ================*/
 
 .container-login {
@@ -81,7 +82,7 @@ header{
     margin-bottom: 3.5rem;
 }
 
-.input-email {
+.input-email, .input-username {
     background: var(--white);
     border: solid 3px var(--green);
     width: 40%;
@@ -91,8 +92,22 @@ header{
     margin-bottom: 3.5rem;
 }
 
+
 .input-email::placeholder {
     font: 300 italic 1rem Ubuntu, 'sans-serif';
+}
+
+.icon-eye {
+    width: 2rem;
+    position: absolute;
+    margin-top: -2.5rem;
+    margin-left: 10rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.icon-eye.off {
+    display: none;
 }
 
 .button.login {
@@ -295,7 +310,11 @@ ul{
         padding-top: 3rem;
     }
     .input-email {
-        width: 70%;
+        width: 80%;
+    }
+    .icon-eye {
+        margin-left: 3rem;
+        width: 1.5rem;
     }
     .button.login  {
         width: 50%;

@@ -1,12 +1,25 @@
 // VERFICAÇÃO DO LOGIN
 
-var nameUser = document.querySelector(".input-email");
+var nameUser = document.querySelector(".input-username");
+
+var iconEyes = document.querySelector(".icon-eye").addEventListener("click", () => {
+    nameUser.type = "text";
+    document.querySelector(".icon-eye.off").style.display = "flex";
+})
+
+var iconEyesOff = document.querySelector(".icon-eye.off").addEventListener("click", () => {
+    nameUser.type = "password";
+    document.querySelector(".icon-eye.off").style.display = "none";
+})
 
 var buttonLogin = document.querySelector(".button.login").addEventListener("click", () => {
     if(nameUser.value == "FuncA2021") {
-        location.href = "http://127.0.0.1:5500/Front-End/Animals/public/src/pages/homeUser.html"
-    } else {
-        alert("deu não")
+        document.querySelector(".form-login").action = "../pages/animalsUser.html"
+    } else if(nameUser.value == "") {
+        alert("É obrigatório preenchar o campo de Username.")
+    }
+     else {
+         alert("Nome de Usuário Incorreto!")
     }
 })
 
