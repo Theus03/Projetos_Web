@@ -198,19 +198,28 @@ ul{
 }
 
 .container-images {
-    background-color: red;
-    display: grid;
-    justify-content: stretch;
-    grid-template-columns: 5fr;
-}
-.row-one, .row-two {
-    background-color: blue;
+    position: absolute;
+    background-color: #28281a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 17rem;
 }
 
-.row-one img, .row-two img{
+.img-homeFunc{
+    width: 33.3vw;
+    height: 51.2vh;
+    filter: grayscale(100%);
+    transition: all 0.2s;
+}
 
-    width: 12rem;
-    height: 12rem;
+.img-homeFunc:hover {
+    filter: grayscale(0%);
+}
+
+
+.img-homeFunc.two {
+    height: 51.2vh;
 }
 
 .button-home {
@@ -320,6 +329,64 @@ ul{
 }
 
 
+/*================ REGISTER ================*/
+.title-page {
+    text-align: center;
+    font: 400 2.5rem Ubuntu, 'sans-serif';
+    margin: 3rem;
+}
+
+.inputs-field {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.column-one, .column-two{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.field-input {
+    font: 400 1rem Ubuntu, 'sans-serif';
+    width: 28rem;
+    padding: 1rem;
+    margin: 0.8rem;
+    border: solid 3px var(--green);
+    outline: none;
+    transition: all 0.2s;
+}
+
+.field-input::placeholder {
+    font: italic 1.2rem Ubuntu, 'sans-serif';
+}
+
+.field-input:focus {
+    transform: scale(1.03);
+}
+
+#addAnimal {
+    background: var(--green);
+    display: flex;
+    justify-content: center;
+    margin-inline: auto;
+    padding: 1rem;
+    width: 15%;
+    font: 400 1.5rem Ubuntu, 'sans-serif';
+    color: var(--white);
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+#addAnimal:hover {
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+
 
 /*================ RESPONSIVE ================*/
 
@@ -364,14 +431,25 @@ ul{
     }
 
     .text-slogan {
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
         
     .container-slogan {
         margin-top: 6rem;
     }
 
+    .container-images{
+        flex-direction: column;
+    }
+
+    
+    .img-homeFunc{
+        width: 100vw;
+        height: 50vh;
+    }
+
     /*================ ANIMALS ================*/
+    
     .div{
         padding-left: 1rem;
     }
@@ -384,7 +462,33 @@ ul{
         width: 70%;
         margin-bottom: 15rem;
     }
+    
+    /*================ REGISTER ================*/
+    .container-register {
+        height: 120vh;
+    }
+    .title-page {
+        text-align: center;
+        font: 400 2rem Ubuntu, 'sans-serif';
+        margin: 1rem;
+    }
+    .inputs-field {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+    }
+    .field-input {
+        width: 15rem;
+    }
 
+    #addAnimal{
+        padding: 1rem;
+        width: 35%;
+        font: 400 1.5rem Ubuntu, 'sans-serif';
+        margin-bottom: 3rem;
+    }
 }
 
 @media (width: 1024px) {
