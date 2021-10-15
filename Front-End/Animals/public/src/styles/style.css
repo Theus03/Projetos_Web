@@ -333,7 +333,7 @@ ul{
 .title-page {
     text-align: center;
     font: 400 2.5rem Ubuntu, 'sans-serif';
-    margin: 3rem;
+    padding-top: 3rem;
 }
 
 .inputs-field {
@@ -387,6 +387,70 @@ ul{
 }
 
 
+/*================ LIST ================*/
+
+.container-title {
+    margin: 4rem;
+    width: 65vw;
+    display: flex;
+    margin-inline: auto;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container-total {
+    display: flex;
+}
+
+.title-page.list {
+    padding-top: 0rem;
+}
+
+.container-total h4 {
+    font: 800 1.3rem Ubuntu, 'sans-serif';
+    text-transform: uppercase;
+    margin-left: 0.5rem;
+}
+
+.container-table {
+    width: min(85vw, 1000px);
+    overflow: auto;
+    margin-inline: auto;
+}
+
+#data-table {
+    width: 100%;
+    text-align: center;
+    border-spacing: 0rem 1.5rem;
+    overflow: auto;
+}
+
+thead tr th {
+    background: var(--green);
+    padding: 1.5rem;
+    color: var(--white);
+    font: 800 1.2rem Ubuntu, 'sans-serif';
+}
+
+tbody tr td{
+    background-color: #E5E5E5;  
+    padding: 1.5rem;
+    color: var(--black);
+    font: 400 1.2rem Ubuntu, 'sans-serif';
+}
+
+hr{
+    background-color: #c4c4c4;
+    border: solid 1px #c4c4c4;
+    visibility: hidden;
+    margin: 0.1rem;
+}
+
+tbody tr td a {
+    text-transform: uppercase;
+    color: var(--black);
+    font: 400 0.9rem Ubuntu, 'sans-serif';
+}
 
 /*================ RESPONSIVE ================*/
 
@@ -488,6 +552,18 @@ ul{
         width: 35%;
         font: 400 1.5rem Ubuntu, 'sans-serif';
         margin-bottom: 3rem;
+    }
+
+    /*================ LIST ================*/
+    .container-title {
+        margin: 1rem;
+        width: 90vw;
+        flex-direction: column;
+    }
+    .container-total h4 {
+        font: 800 1rem Ubuntu, 'sans-serif';
+        text-transform: uppercase;
+        margin-left: 0.5rem;
     }
 }
 
