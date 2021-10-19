@@ -474,7 +474,15 @@ tbody tr td a {
     display: none;
 }
 
-.modal-overlay.active {
+.modal-overlay.edit {
+    background: rgba(0, 0, 0, 0.550);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    opacity: 100;
+}
+
+.modal-overlay.active, .modal-overlay.edit.active {
     opacity: 100;
     display: flex;
     justify-content: center;
@@ -494,10 +502,21 @@ tbody tr td a {
     border: solid 3px var(--red);
 }
 
+.modal.edit {
+    padding: 2rem;
+    width: 70%;
+    height: 85%;
+    border: solid 3px var(--blue);
+}
+
 .textModal {
     font: 500 2rem Ubuntu, 'sans-serif';
     text-transform: uppercase;
     text-align: center;
+}
+
+.field-input.edit {
+    border: solid 3px var(--blue);
 }
 
 .deleteModal {
@@ -529,6 +548,11 @@ tbody tr td a {
 
 .buttonDelete {
     background: var(--red);
+    color: var(--white);
+}
+
+.buttonEdit {
+    background: var(--blue);
     color: var(--white);
 }
 
