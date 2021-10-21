@@ -69,7 +69,31 @@ const clearFields = () => {
     document.getElementById('name').dataset.index = "new";
 }
 
-const save
+const saveAniamls = () => {
+    try {
+        if(isValidForm()) {
+            const animal = {
+                animal = document.getElementById("animal").value, 
+                breed = document.getElementById("breed").value,
+                age = document.getElementById("age").value,
+                lenght = document.getElementById("lenght").value,
+                species = document.getElementById("species").value,
+                kind = document.getElementById("kind").value,
+                weight = document.getElementById("weight").value,
+                height = document.getElementById("height").value,
+
+            }
+            const index = document.getElementById("animal").dataset.index
+            if(index == "new") {
+                createAnimal(animal)
+                alert("Animal Registrado!");
+            }
+        }
+    } catch (error) {
+        alert(error.message);
+    }
+}
+
 // DOM
 
 // FORM
