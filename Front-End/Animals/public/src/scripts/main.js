@@ -1,16 +1,15 @@
-// MODAL DELETE
+// MODAL
 
+// Delete
 function openModalDelete() {
     document.querySelector(".modal-overlay").classList.add("active");
 }
-
 
 function closeModalDelete() {
     document.querySelector(".modal-overlay").classList.remove("active");
 }
 
-// MODAL EDIT
-
+// Edit
 function openModalEdit() {
     document.querySelector(".modal-overlay.edit").classList.add("active");
 }
@@ -53,3 +52,26 @@ const createAnimal = (animal) => {
    dbAnimal.push(animal); // inserindo o animal
    setLocalStorage(dbAnimal); // mostrar informações dos animais
 }
+
+// VALIDATION 
+
+// Funcão que irá validar o form, e que poderá retornar as restrições dos forms
+const isValidForm = () => {
+    return document.querySelector(".form").reportValidity();
+}
+
+// INTERACTION WITH LAYOUT
+
+// Funcão que irá limpar os campos do forms
+const clearFields = () => {
+    const fields = document.querySelectorAll(".field-input");
+    fields.forEach(field => field.value = "");
+    document.getElementById('name').dataset.index = "new";
+}
+
+const save
+// DOM
+
+// FORM
+
+// EVENTS
