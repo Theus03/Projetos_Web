@@ -69,8 +69,12 @@ const clearFields = () => {
     document.getElementById('name').dataset.index = "new";
 }
 
+
+// Funcão que irá salvar os animais
 const saveAniamls = () => {
+    // irá tentar fazer as seguintes ações
     try {
+        // na verificação irá chamar a função isValidForm(), caso a função dfor true ele irá pegar os valores que foram inseridos dentro de cada input
         if(isValidForm()) {
             const animal = {
                 animal = document.getElementById("animal").value, 
@@ -81,9 +85,9 @@ const saveAniamls = () => {
                 kind = document.getElementById("kind").value,
                 weight = document.getElementById("weight").value,
                 height = document.getElementById("height").value,
-
             }
             const index = document.getElementById("animal").dataset.index
+            // verificando se o index que é o campo chave, tem o data-index = "new"
             if(index == "new") {
                 createAnimal(animal)
                 alert("Animal Registrado!");
@@ -95,7 +99,66 @@ const saveAniamls = () => {
 }
 
 // DOM
+// criar uma função onde irá mostrar um esqueleto HTML de como ficará nossa lista
+const createRowAnimal = (animal, index) => {
+    const newRow = document.createElement("tr");
+
+    newRow.innerHTML = `
+        <td>${animal.animal}</td>
+        <td>${animal.breed}</td>
+        <td>${animal.age}</td>
+        <td>${animal.lenght}</td>
+        <td>${animal.species}</td>
+        <td>${animal.kind}</td>
+        <td>${animal.weight}</td>
+        <td>${animal.height}</td>
+        <td>
+            <a class="link-edit" onclick="openModalEdit()">Editar/Detalhes</a><br><hr>
+            <a class="link-delete" onclick="openModalDelete()">Excluir</a>
+        </td>
+    `
+    document.querySelector("#data-table>tbody").appendChild(newRow);
+}
+
+// criar função que limpa a tabela
+const clearTable = () => {
+    const rows = document.querySelectorAll("#data-table>tbody tr")
+    rows.forEach(row => row.parentNode.removeChild(row))
+}
+
+// criar função que atualiza a tabela
+const updateTableAnimal = () => {
+    const dbAnimal = readAnimal();
+    clearTable()
+    dbAnimal.forEach(createRowAnimal);
+}
 
 // FORM
+
+const emptyTable = document.querySelectorAll('#data-table>tbody>tr td').value
+
+// criar função para preencher os campos
+const fillFields = (animal) => {
+    document.getElementById("animal").value = animal.animal
+    document.getElementById("breed").value = animal.breed
+    document.getElementById("age").value = animal.age
+    document.getElementById("lenght").value = animal.lenght
+    document.getElementById("species").value = animal.species
+    document.getElementById("kind").value = animal.kind
+    document.getElementById("weight").value = animal.weight
+    document.getElementById("height").value = animal.height
+    document.getElementById("animal").dataset.index = animal.index
+}
+
+// função que faz a ação para editar
+const editAnimal = (index) => {
+    const animal = readAnimal()[index]
+    animal.index = index
+    fillFields(animal)
+}
+
+// função que faz a ação para excluir
+
+
 
 // EVENTS
