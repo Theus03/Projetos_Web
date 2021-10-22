@@ -71,7 +71,7 @@ const clearFields = () => {
 
 
 // Funcão que irá salvar os animais
-const saveAniamls = () => {
+const saveAnimal = () => {
     // irá tentar fazer as seguintes ações
     try {
         // na verificação irá chamar a função isValidForm(), caso a função dfor true ele irá pegar os valores que foram inseridos dentro de cada input
@@ -158,7 +158,23 @@ const editAnimal = (index) => {
 }
 
 // função que faz a ação para excluir
+const editDelete = (event) => {
+    if(event.target.type == "a") {
+        const[action, index] = event.target.id.split('-')
 
+        if(action == "edit") {
+            alert("edit")
+        } else {
+            alert("delete")
+        }
+    }
+}
+
+updateTableAnimal();
 
 
 // EVENTS
+
+document.getElementById("addAnimal").addEventListener("click", saveAnimal)
+
+document.querySelector("#data-table>tbody").addEventListener("click", editDelete)
