@@ -43,16 +43,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>Águia</td>
-                    <td>Águia-Real</td>
-                    <td>Águia-Real</td>
-                    <td>Aves</td>
-                    <td>
-                        <a class="link-edit" onclick="openModalEdit()">Editar/Detalhes</a><br><hr>
-                        <a class="link-delete" onclick="openModalDelete()">Excluir</a>
-                    </td>
-                </tr>
+               <tr></tr>
             </tbody>
         </table>
     </section>
@@ -91,7 +82,25 @@
             </form>
         </div>
     </div>
-
+    <div class="result-overlay">
+        <form class="form">
+            <div class="inputs-field">
+                <div class="column-one">
+                    <input type="text" data-index="new" class="field-input" id="animal" placeholder="Animal (Ex. Leão, Macaco, Elefante)">
+                    <input type="text" class="field-input" id="breed" placeholder="Raça">
+                    <input type="text" class="field-input" id="age" placeholder="Idade">
+                    <input type="text" class="field-input" id="length" placeholder="Comprimento">
+                </div>
+                <div class="column-two">
+                    <input type="text" class="field-input" id="species" placeholder="Espécie">
+                    <input type="text" class="field-input" id="kind" placeholder="Classe">
+                    <input type="text" class="field-input" id="weight" placeholder="Peso">
+                    <input type="text" class="field-input" id="height" placeholder="Altura">
+                </div>
+            </div>
+            <button id="addAnimal">INSERIR</button>
+        </form>
+    </div>
 </body>
 <script src="../scripts/main.js"></script>
 </html>

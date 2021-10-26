@@ -25,8 +25,8 @@
         </nav>    
     </header>
     <main class="container-register">
-        <h2 class="title-page">CADASTRO</h2>
-        <form action="" class="form">
+        <h2 class="title-page" >CADASTRO</h2>
+        <form action="../pages/listFunc.html" class="form">
             <div class="inputs-field">
                 <div class="column-one">
                     <input type="text" data-index="new" class="field-input" id="animal" placeholder="Animal (Ex. Leão, Macaco, Elefante)">
@@ -44,5 +44,21 @@
             <button id="addAnimal">INSERIR</button>
         </form>
     </main>
+    <div class="result-overlay">
+        <table id="data-table">
+            <thead>
+                <tr>
+                    <th>Animal</th>
+                    <th>Espécie</th>
+                    <th>Raça</th>
+                    <th>Classe</th>
+                    <th>Opções</th>
+                </tr>
+            </thead>
+            <tbody>
+               <tr></tr>
+            </tbody>
+        </table>
+    </div>
 </body>
 </html>
