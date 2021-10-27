@@ -72,6 +72,7 @@ const clearFields = () => {
 
 // Funcão que irá salvar os animais
 const saveAnimal = () => {
+    alert("entrou")
     // irá tentar fazer as seguintes ações
     try {
         // na verificação irá chamar a função isValidForm(), caso a função dfor true ele irá pegar os valores que foram inseridos dentro de cada input
@@ -113,8 +114,8 @@ const createRowAnimal = (animal, index) => {
         <td>${animal.weight}</td>
         <td>${animal.height}</td>
         <td>
-            <a class="link-edit" onclick="openModalEdit()">Editar/Detalhes</a><br><hr>
-            <a class="link-delete" onclick="openModalDelete()">Excluir</a>
+            <a class="link-edit" id="edit-${index}" onclick="openModalEdit()">Editar/Detalhes</a><br><hr>
+            <a class="link-delete" id="delete-${index}" onclick="openModalDelete()">Excluir</a>
         </td>
     `
     document.querySelector("#data-table>tbody").appendChild(newRow);
@@ -174,6 +175,10 @@ updateTableAnimal();
 
 
 // EVENTS
+
+function addAnimal() {
+    alert("Oi")
+}
 
 document.getElementById("addAnimal").addEventListener("click", saveAnimal)
 
