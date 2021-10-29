@@ -26,7 +26,7 @@
     </header>
     <main class="container-register">
         <h2 class="title-page" >CADASTRO</h2>
-        <form class="form">
+        <form id="form" action="../pages/listFunc.html">
             <div class="inputs-field">
                 <div class="column-one">
                     <input type="text" data-index="new" class="field-input" id="animal" placeholder="Animal (Ex. Leão, Macaco, Elefante)">
@@ -41,7 +41,7 @@
                     <input type="text" class="field-input" id="height" placeholder="Altura">
                 </div>
             </div>
-            <button id="addAnimal" onclick="addAnimal()">INSERIR</button>
+            <button id="addAnimal" class="addAnimal">INSERIR</button>
         </form>
     </main>
     <div class="result-overlay">
@@ -60,6 +60,6 @@
             </tbody>
         </table>
     </div>
-</body>
 <script src="../scripts/main.js"></script>
+</body>
 </html>

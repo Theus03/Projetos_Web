@@ -28,7 +28,7 @@
         <h2 class="title-page list">INFORMAÇÕES DO ZOO</h2>
         <div class="container-total">
             <h4>Total de Animais: </h4>
-            <h4 class="total"> 3</h4>
+            <h4 class="total"> </h4>
         </div>
     </section>
     <section class="container-table">
@@ -53,37 +53,37 @@
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#DF525A" stroke-width="1" stroke-linecap="round"  stroke-linejoin="round" class="deleteModal"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg>
             <div class="group-buttons">
                 <button class="buttonCancel" onclick="closeModalDelete()">Cancelar</button>
-                <button class="buttonDelete">Remover</button>
+                <button class="buttonDelete" id="confirmDelete">Remover</button>
             </div>
         </div>
     </div>
     <div class="modal-overlay edit">
         <div class="modal edit">
             <h2 class="textModal">EDITAR/DETALHES</h2>
-            <form action="">
+            <form action="" id="form">
                 <div class="inputs-field">
                     <div class="column-one">
-                        <input type="text" data-index="new" class="field-input edit" placeholder="Animal (Ex. Leão, Macaco, Elefante)">
-                        <input type="text" class="field-input edit" placeholder="Raça">
-                        <input type="text" class="field-input edit" placeholder="Idade">
-                        <input type="text" class="field-input edit" placeholder="Comprimento">
+                        <input type="text" data-index="new" class="field-input edit" id="animal" placeholder="Animal (Ex. Leão, Macaco, Elefante)">
+                        <input type="text" class="field-input edit" id="breed" placeholder="Raça">
+                        <input type="text" class="field-input edit" id="age" placeholder="Idade">
+                        <input type="text" class="field-input edit" id="length" placeholder="Comprimento">
                     </div>
                     <div class="column-two">
-                        <input type="text" class="field-input edit" placeholder="Espécie">
-                        <input type="text" class="field-input edit" placeholder="Classe">
-                        <input type="text" class="field-input edit" placeholder="Peso">
-                        <input type="text" class="field-input edit" placeholder="Altura">
+                        <input type="text" class="field-input edit" id="species" placeholder="Espécie">
+                        <input type="text" class="field-input edit" id="kind" placeholder="Classe">
+                        <input type="text" class="field-input edit" id="weight" placeholder="Peso">
+                        <input type="text" class="field-input edit" id="height" placeholder="Altura">
                     </div>
                 </div>
                 <div class="group-buttons">
                     <button class="buttonCancel" onclick="closeModalEdit()">Cancelar</button>
-                    <button class="buttonEdit">Editar</button>
+                    <button class="buttonEdit" id="addAnimal" >Editar</button>
                 </div>
             </form>
         </div>
     </div>
     <div class="result-overlay">
-        <form class="form">
+        <form id="form">
             <div class="inputs-field">
                 <div class="column-one">
                     <input type="text" data-index="new" class="field-input" id="animal" placeholder="Animal (Ex. Leão, Macaco, Elefante)">
@@ -101,6 +101,6 @@
             <button id="addAnimal">INSERIR</button>
         </form>
     </div>
+    <script src="../scripts/main.js"></script>
 </body>
-<script src="../scripts/main.js"></script>
 </html>

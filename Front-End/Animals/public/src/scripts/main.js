@@ -22,7 +22,7 @@ function closeModalEdit() {
 // LOCALSTORAGE
 
 // Pegando Informações dos animais
-const getLocalStorage = () => JSON.parse(localStorage.getItem("db_animal")) || [];
+const getLocalStorage = () => JSON.parse(localStorage.getItem("db_animal")) ?? [];
 
 // Mostrando informações dos animais
 const setLocalStorage = (dbAnimal) => localStorage.setItem("db_animal", JSON.stringify(dbAnimal))
@@ -31,7 +31,7 @@ const setLocalStorage = (dbAnimal) => localStorage.setItem("db_animal", JSON.str
 
 // Delete
 const deleteAnimal = (index) => {
-    const dbAnimal = getLocalStorage(); // pegar informações dos animais
+    const dbAnimal = readAnimal(); // pegar informações dos animais
     dbAnimal.splice(index, 1); // deleta o animal da posição(que ele está, quantos animais terão que ser deletados nessa ação)
     setLocalStorage(dbAnimal); // mostrar informações dos animais
 }
@@ -44,7 +44,7 @@ const updateAnimal = (index, animal) => {
 }
 
 // Read
-const readAnimal = getLocalStorage(); // pegar informações dos animais
+const readAnimal = () => getLocalStorage(); // pegar informações dos animais
 
 // Create
 const createAnimal = (animal) => {
@@ -53,11 +53,15 @@ const createAnimal = (animal) => {
    setLocalStorage(dbAnimal); // mostrar informações dos animais
 }
 
+// TOTAL
+    
+document.querySelector(".total").innerHTML = readAnimal().length
+
 // VALIDATION 
 
 // Funcão que irá validar o form, e que poderá retornar as restrições dos forms
-const isValidForm = () => {
-    return document.querySelector(".form").reportValidity();
+function isValidForm() {
+    return document.getElementById("form").reportValidity();
 }
 
 // INTERACTION WITH LAYOUT
@@ -72,26 +76,29 @@ const clearFields = () => {
 
 // Funcão que irá salvar os animais
 const saveAnimal = () => {
-    alert("entrou")
     // irá tentar fazer as seguintes ações
     try {
+        alert("entrou")
         // na verificação irá chamar a função isValidForm(), caso a função dfor true ele irá pegar os valores que foram inseridos dentro de cada input
         if(isValidForm()) {
             const animal = {
-                animal = document.getElementById("animal").value, 
-                breed = document.getElementById("breed").value,
-                age = document.getElementById("age").value,
-                lenght = document.getElementById("lenght").value,
-                species = document.getElementById("species").value,
-                kind = document.getElementById("kind").value,
-                weight = document.getElementById("weight").value,
-                height = document.getElementById("height").value,
+                animal: document.getElementById("animal").value, 
+                breed: document.getElementById("breed").value,
+                age: document.getElementById("age").value,
+                length: document.getElementById("length").value,
+                species: document.getElementById("species").value,
+                kind: document.getElementById("kind").value,
+                weight: document.getElementById("weight").value,
+                height: document.getElementById("height").value
             }
             const index = document.getElementById("animal").dataset.index
             // verificando se o index que é o campo chave, tem o data-index = "new"
             if(index == "new") {
                 createAnimal(animal)
                 alert("Animal Registrado!");
+            } else {
+                updateAnimal(index, animal)
+                updateTableAnimal()
             }
         }
     } catch (error) {
@@ -108,14 +115,10 @@ const createRowAnimal = (animal, index) => {
         <td>${animal.animal}</td>
         <td>${animal.breed}</td>
         <td>${animal.age}</td>
-        <td>${animal.lenght}</td>
-        <td>${animal.species}</td>
-        <td>${animal.kind}</td>
-        <td>${animal.weight}</td>
-        <td>${animal.height}</td>
+        <td>${animal.length}</td>
         <td>
-            <a class="link-edit" id="edit-${index}" onclick="openModalEdit()">Editar/Detalhes</a><br><hr>
-            <a class="link-delete" id="delete-${index}" onclick="openModalDelete()">Excluir</a>
+            <a class="link-edit" id="edit-${index}" >Editar/Detalhes</a><br><hr>
+            <a class="link-delete" id="delete-${index}">Excluir</a>
         </td>
     `
     document.querySelector("#data-table>tbody").appendChild(newRow);
@@ -143,7 +146,7 @@ const fillFields = (animal) => {
     document.getElementById("animal").value = animal.animal
     document.getElementById("breed").value = animal.breed
     document.getElementById("age").value = animal.age
-    document.getElementById("lenght").value = animal.lenght
+    document.getElementById("length").value = animal.length
     document.getElementById("species").value = animal.species
     document.getElementById("kind").value = animal.kind
     document.getElementById("weight").value = animal.weight
@@ -160,13 +163,19 @@ const editAnimal = (index) => {
 
 // função que faz a ação para excluir
 const editDelete = (event) => {
-    if(event.target.type == "a") {
+    if(event.target.a != "") {
         const[action, index] = event.target.id.split('-')
 
         if(action == "edit") {
-            alert("edit")
+            openModalEdit();
+            editAnimal(index);
         } else {
-            alert("delete")
+            openModalDelete();
+            document.getElementById("confirmDelete").addEventListener("click", () => {
+                deleteAnimal(index);
+                closeModalDelete();
+                updateTableAnimal()
+            })
         }
     }
 }
@@ -176,10 +185,6 @@ updateTableAnimal();
 
 // EVENTS
 
-function addAnimal() {
-    alert("Oi")
-}
-
-document.getElementById("addAnimal").addEventListener("click", saveAnimal)
+document.getElementById("addAnimal").addEventListener('click', saveAnimal)
 
 document.querySelector("#data-table>tbody").addEventListener("click", editDelete)
