@@ -168,7 +168,6 @@ ul{
     justify-content: center;
     margin-inline: auto;
     height: 86.5vh; 
-    background-color:red;
 }
 
 .box-black {
@@ -236,6 +235,8 @@ ul{
 .button-home {
     background: var(--green);
     border: none;
+    text-align: center;
+    text-decoration: none;
     padding: 1rem;
     width: 40%;
     font: 400 1.5rem Ubuntu, 'sans-serif';
@@ -249,6 +250,26 @@ ul{
 }
 
 /*================ ANIMALS ================*/
+
+.back {
+    background: #ffffff36;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: 5rem;
+    padding: 1rem;
+    border-radius: 0px 0px 20px 0px;
+    font: 500 1rem Ubuntu, "sans-serif";
+    color: white;
+    text-decoration: none; 
+    transition: all 0.2s;
+}
+
+.back:hover {
+    padding: 1.2rem;
+    border-radius: 0px 0px 15px 0px;
+}
+
 .slider-container {
     position: relative;
     overflow: hidden;

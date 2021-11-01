@@ -53,9 +53,12 @@ const createAnimal = (animal) => {
    setLocalStorage(dbAnimal); // mostrar informações dos animais
 }
 
+
 // TOTAL
-    
-document.querySelector(".total").innerHTML = readAnimal().length
+const totalAnimal = () => {
+    document.querySelector(".total").innerHTML = getLocalStorage().length;
+}
+
 
 // VALIDATION 
 
@@ -135,6 +138,7 @@ const updateTableAnimal = () => {
     const dbAnimal = readAnimal();
     clearTable()
     dbAnimal.forEach(createRowAnimal);
+    totalAnimal()
 }
 
 // FORM

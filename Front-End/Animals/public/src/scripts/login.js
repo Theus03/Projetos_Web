@@ -14,7 +14,7 @@ var iconEyesOff = document.querySelector(".icon-eye.off").addEventListener("clic
 
 var buttonLogin = document.querySelector(".button.login").addEventListener("click", () => {
     if(nameUser.value == "FuncA2021") {
-        document.querySelector(".form-login").action = "../pages/animalsUser.html"
+        document.querySelector(".form-login").action = "../pages/homeFunc.html"
     } else if(nameUser.value == "") {
         alert("É obrigatório preenchar o campo de Username.")
     }
