@@ -81,7 +81,6 @@ const clearFields = () => {
 const saveAnimal = () => {
     // irá tentar fazer as seguintes ações
     try {
-        alert("entrou")
         // na verificação irá chamar a função isValidForm(), caso a função dfor true ele irá pegar os valores que foram inseridos dentro de cada input
         if(isValidForm()) {
             const animal = {
