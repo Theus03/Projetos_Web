@@ -13,15 +13,15 @@ export function Login() {
         <div id="page-auth">
             <main>
                 <img src={logoImg} alt="Logo - MyHouse" />
-                <span>ENTRE COM O CÓDIGO DA SALA E FAÇA PERGUNTAS SOBRE SEU FUTURO LAR.</span>
+                <span>ENTRA E CONHEÇA UM POUCO MAIS SOBRE NOSSA EMPRESA. </span>
                 <form>
-                    <input type="text" placeholder='Código da Sala'/>
+                    <input type="text" placeholder='Endereço de e-mail'/>
                     <Button type="submit">
-                        Entrar na Sala
+                        Entrar com o meu e-mail
                     </Button>
                     <button className="button-google">
                         <img src={iconGoogle} alt="Icon Google" />
-                        CRIAR SALA COM O GOOGLE
+                        ENTRAR COM O GOOGLE
                     </button>     
                 </form>
             </main>
