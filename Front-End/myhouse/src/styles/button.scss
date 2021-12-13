@@ -1,0 +1,22 @@
+.button {
+    background: var(--color-primary);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    padding: 1.2rem;
+    width: 70%;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: 0.4s;
+
+    &:not(:disabled):hover {
+        filter: brightness(0.9)
+    }
+
+    &:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+    }
+}

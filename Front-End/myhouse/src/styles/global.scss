@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 93.5%;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+@media (max-width: 800px ) {
+    html{
+        font-size: 85.7%;
+    }
+    aside {
+        display: none;
+    }
+}
+
+@media (width: 1024px) {
+    html{
+        font-size:85.5%
+    }
+
+    aside {
+        display: none;
+    }
+}
