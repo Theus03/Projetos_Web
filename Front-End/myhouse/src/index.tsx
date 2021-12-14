@@ -1,14 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Login } from './pages/Login';
+import { BrowserRouter } from 'react-router-dom';
 
+import './services/firebase';
 
 import './styles/global.scss';
 import './styles/colors.scss';
+import App from './App';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <Login />
-  </React.StrictMode>,
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>,
   document.getElementById('root')
 );
