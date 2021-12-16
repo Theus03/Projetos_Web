@@ -1,0 +1,43 @@
+.boxContainer {
+    display: flex;
+    padding: 10rem 3rem;
+    justify-content: center;
+
+    .box-house {
+        border-radius: 8px;
+        width: 25%;
+        height: 50vh;
+        margin: 2rem;
+        background: var(--gray);
+        transition: 0.4s;
+        
+        > img {
+            border-radius: 8px;
+            object-fit: cover;
+            width: 100%;
+            height: 95%;
+        }
+        
+        .title-box {
+            border-radius: 8px;
+            background: var(--gray);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            > img {
+                width: 2rem;
+                margin: 1rem;
+            }
+            
+            > span {
+                font-weight: 400;
+                font-size: 1.3rem;
+            }
+        }
+    }
+
+    .box-house:hover{
+        transform: translateY(-8%);
+    }
+}

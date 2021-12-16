@@ -2,17 +2,13 @@ import { Link } from 'react-router-dom';
 
 import logoImg  from '../assets/images/logo.png';
 import bannerImg from '../assets/images/img-banner.jpg';
-import houseImgNY from '../assets/images/img-ny.jpg';
-import houseImgUK from '../assets/images/img-uk.jpg';
-import houseImgBH from '../assets/images/img-bh.jpg';
-import serviceImgOne from '../assets/images/service-one.png';
-import serviceImgTwo from '../assets/images/service-two.png';
-import serviceImgThree from '../assets/images/service-three.png';
 
 import '../styles/home.scss';
 
 import { useAuth } from '../hooks/useAuth';
 import toast, { Toaster } from 'react-hot-toast';
+import { BoxHouse } from '../components/BoxHouse';
+import { BoxServices } from '../components/BoxServices';
 
 async function Contact() {
     toast('Telefone: 11 36542126',  {
@@ -25,6 +21,7 @@ async function Contact() {
 
 export function Home() {
     const { user } = useAuth();
+
     return(
 
         <div className="page-home">
@@ -55,36 +52,12 @@ export function Home() {
                 </div>
             </section>
             <section id="section-two">
-                <div className="box-house"><img src={houseImgNY} alt="Imagem de uma casa em Nova Iorque" /></div>
-                <div className="box-house"><img src={houseImgUK} alt="Imagem de uma casa no Reino Unido" /></div>
-                <div className="box-house"><img src={houseImgBH} alt="Imagem de uma casa em Belo Horizonte" /></div>
+                <BoxHouse></BoxHouse>
             </section>
             <section id="section-three">
-                <div className="box-services">
-                    <div className="content-box-services">
-                        <img src={serviceImgOne} className="imgService" alt="Ícone do serviço de aquitetura externa" />
-                        <div className="text-services">
-                            <h2>TRABALHO EXTERNO DE ARQUITETURA</h2>
-                            <span>Desenhamos toda a parte externa de sua casa de um jeito rápido e da forma que você quiser.</span>
-                        </div>
-                        <img src={serviceImgTwo} alt="Ícone do serviço de Trabalho completo de arquitetura" />
-                        <div className="text-services">
-                            <h2>TRABALHO COMPLETO DE ARQUITETURA</h2>
-                            <span>Venha construir sua planta do zero até o fim conosco.</span>
-                        </div>
-                        <img src={serviceImgThree} alt="Ícone do serviço de aquitetura externa" />
-                        <div className="text-services">
-                            <h2>ANÁLISE DE ARQUITETURA</h2>
-                            <span>Fazemos um levantamento de todos os requisitos para que você possa prosseguir da melhor forma com seu projeto.</span>
-                        </div>
-                    </div>
-                    <div className="group-circles">
-                        <div className="circle one">1</div>
-                        <div className="circle two">2</div>
-                        <div className="circle three">3</div>
-                    </div>
-                </div>
+                <BoxServices></BoxServices>
             </section>
+            <hr /> 
             <footer>
                 <img src={logoImg} alt="Logo da MyHouse" />
                 <hr />

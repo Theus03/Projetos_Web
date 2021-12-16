@@ -120,3 +120,43 @@ header {
 #section-two {
     background-color: var(--color-primary);
 }
+
+hr {
+    padding: 2rem;
+    height: 30vh;
+    transform: translateY(-80%);
+    border: none;
+    background-color: var(--color-primary);
+    margin-bottom: -12%;
+}
+
+
+footer {
+    background: var(--gray);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+
+        > img {
+            width: 6rem;
+        }
+        
+        > hr {
+            margin-left: 5rem;
+            margin-right: 5rem;
+            padding: 0rem;
+            height: 14vh;
+            width: 0.2vw;
+            border-radius: 2px;
+            transform: translateY(0%);
+            border: none;
+            background-color: var(--color-primary);
+            margin-bottom: 0%;
+        }
+        > span {
+            font-weight: 700;
+            color: var(--color-primary);
+            font-size: 1.3rem;
+        }
+    }
