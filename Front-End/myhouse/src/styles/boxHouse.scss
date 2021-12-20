@@ -41,3 +41,15 @@
         transform: translateY(-8%);
     }
 }
+
+@media (max-width: 800px) {
+    .boxContainer {
+        flex-direction: column;
+        align-items: center;
+
+        .box-house {
+            width: 100%;
+            margin: 2.5rem;
+        }
+    }
+}
