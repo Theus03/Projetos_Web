@@ -15,6 +15,19 @@
         height: 55vh;
         padding: 2rem;
         transform: translateY(-15%);
+
+        &::-webkit-scrollbar {
+            border-radius: 10px;
+            height: 30px;
+            width: 15px;
+
+          }
+        
+          &::-webkit-scrollbar-thumb {
+            padding: 2rem;
+            background: var(--gold);
+            border-radius: 10px 0px;
+          }
         
         .content-box-services {
             display: flex;
@@ -22,11 +35,18 @@
             align-items:center;
             justify-content: space-evenly;
 
+            .title-box-services {
+                color: var(--color-primary);
+                text-transform: uppercase;
+                font-weight: 800;
+                font-size: 2rem;
+                margin-bottom: 1.5rem;
+            }
             .content {
                 width: 100%;
                 display: flex;
                 align-items: center;
-                justify-content: center;
+                justify-content: space-evenly;
                 margin-bottom: 2.5rem;
          
                 > .imgService {
@@ -36,7 +56,15 @@
                     width: 50%;
                     display: flex;
                     flex-direction: column;
+                    text-align: center;
                     justify-content: center;
+
+                    a {
+                        margin-top: 1rem;
+                        text-decoration: underline;
+                        color: var(--color-primary);
+                        cursor: pointer;
+                    }
     
                     h2 {
                         font-weight: 600;

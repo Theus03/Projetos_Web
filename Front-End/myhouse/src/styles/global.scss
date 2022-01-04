@@ -10,6 +10,19 @@ html{
 
 body {
     font-family: 'Inter', sans-serif;
+
+    &::-webkit-scrollbar {
+        border-radius: 10px;
+        height: 30px;
+        width: 15px;
+
+      }
+    
+      &::-webkit-scrollbar-thumb {
+        padding: 2rem;
+        background: var(--gold);
+        border-radius: 5px;
+      }
 }
 
 @media (max-width: 800px ) {

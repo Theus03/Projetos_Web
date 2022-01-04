@@ -30,7 +30,7 @@ export function Home() {
             <header>
                 <nav>
                     <ul>
-                        <Link className="link" to="/"><li>SERVIÇOS</li></Link>
+                        <a href="#section-three" className="link"><li>SERVIÇOS</li></a>
                         <Link className="link" to="/"><img src={logoImg} className="logo" alt="Logo da MyHouse" /></Link>
                         { user ? (
                             <div>
