@@ -80,7 +80,7 @@ const DOM = {
         <td class="name_book">${book.name_book}</td>
         <td class="name_genre">${book.name_genre}</td>
         <td class="name_author">${book.name_author}</td>
-            <td><img class="icon-delete" src="../icons/delete.svg" title="Excluir" alt="delete" onclick="Book.remove(${index}) "></td>
+            <td><img class="icon-delete" src="./public/src/icons/delete.svg" title="Excluir" alt="delete" onclick="Book.remove(${index}) "></td>
             </tr>
             ` 
             

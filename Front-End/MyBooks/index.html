@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../icons/logo.svg" type="image/x-icon">
     <title>Home - MyBooks</title>
-    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="./public/src/styles/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
@@ -14,11 +14,11 @@
 <body>
     <aside>
         <nav>
-            <a href="#" title="Logo"><img src="../icons/logo.svg" alt="Logo"  class="logo"></a>
+            <a href="#" title="Logo"><img src="./public/src/icons/logo.svg" alt="Logo"  class="logo"></a>
             <ul>
                 <a href="#" title="Home" ><li id="loc"><img src="./public/src/icons/home.svg" alt="Icon - Home" class="icon-nav"></li></a>
-                <a href="../pages/addBook.html" title="Adicionar"><li><img src="../icons/add.svg" alt="Icon - Adicionar" class="icon-nav"></li></a>
-                <a href="../pages/totalBook.html" title="Total"><li><img src="../icons/total.svg" alt="Icon - Total" class="icon-nav"></li></a>
+                <a href="./public/src/pages/addBook.html" title="Adicionar"><li><img src="./public/src/icons/add.svg" alt="Icon - Adicionar" class="icon-nav"></li></a>
+                <a href="./public/src/pages/totalBook.html" title="Total"><li><img src="./public/src/icons/total.svg" alt="Icon - Total" class="icon-nav"></li></a>
             </ul>
         </nav>
     </aside>
@@ -29,7 +29,7 @@
             </div>
             <div class="modal-overlay">
                 <div class="modal">
-                    <img src="../icons/check.svg" alt="adicionado com sucesso">
+                    <img src="./public/src/icons/check.svg" alt="adicionado com sucesso">
                     <h4 class="text-modal">Livro adicionado com sucesso!</h4>   
                 </div>
             </div>
@@ -49,7 +49,7 @@
             </table>   
             
         </div>
-            <p class="text-no-book add">Você não tem livros cadastrados.<a href="../pages/addBook.html" style="margin-left: 0.5rem;">Adicione um livro.</a></p>    
+            <p class="text-no-book add">Você não tem livros cadastrados.<a href="./public/src/pages/addBook.html" style="margin-left: 0.5rem;">Adicione um livro.</a></p>    
             <div class="result-overlay">
                 <form action="../home/home.html" onsubmit="Form.submit(event)">
                     <div class="input-group">
@@ -68,6 +68,6 @@
                 <h1 id="number-result">3</h1> 
             </div>  
         </main>
-<script src="../scripts/script.js"></script>
+<script src="./public/src/scripts/script.js"></script>
 </body>
 </html>
